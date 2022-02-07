@@ -30,12 +30,12 @@
                                            <div> <textarea id='myTextArea' readonly class="form-control" rows="15">{{credential}}</textarea></div>
                                            <br>
                                            <div class="col text-center">
-                                                <button class="btn btn-primary btn-sm" type="button" value="download" onclick="doDL(document.getElementById('myTextArea').value)">{{_('Download Credential')}}</button>
+                                                <button class="btn btn-primary btn-sm" type="button" value="download" onclick="doDownload(document.getElementById('myTextArea').value)">{{_('Download Credential')}}</button>
                                             </div>
                                           <br>
                                           
                                           <br>
-                                        {{verif|safe}}
+                             
                                     </div>
                                 </div>
                                 <br>
@@ -71,6 +71,21 @@
             window.open(dataUrl(s));
         }
         </script>    
+
+<script>
+function doDownload(str, filename) {
+    function dataUrl(data) {
+      return "data:x-application/text," + escape(data);
+    }
+    var downloadLink = document.createElement("a");
+    downloadLink.href = dataUrl(str);
+    downloadLink.download = "{{filename}}" + "_ecole42.jsonld";
+
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+  }
+</script>
 </body>
 
 </html>

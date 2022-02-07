@@ -178,6 +178,11 @@ def import_identity_key(mode) :
 	session['check_identity_key'] = True
 	return redirect (mode.server + 'user/')
 
+"""
+Permet le telechargement du credential
+
+
+"""
 def data(mode) :
 	"""
 	#@app.route('/data/', methods=['GET'])
@@ -196,16 +201,12 @@ def data(mode) :
 		logging.error('document does not exist')
 		return redirect(mode.server + 'user/')
 
-	# advanced information about storage location
-	(location, link) = (my_data.data_location, my_data.data_location)
-	myadvanced = """<b>Data storage</b> : <a class="card-link" href=""" + link + """>""" + location + """</a>"""
-
 	# Display raw verifiable credential
 	credential = Document('certificate')
 	credential.relay_get_credential(session['workspace_contract'], doc_id, mode)
 	return render_template('data_check.html',
 							**session['menu'],
-							verif=myadvanced,
+							filename=credential.__dict__['id'],
 							credential=json.dumps(credential.__dict__, sort_keys=True, indent=4, ensure_ascii=False),
 							id=credential.__dict__['id'])
 
@@ -219,10 +220,19 @@ def user(mode) :
 
 	if request.args.get('flash_message') == "credential_offered" :
 		flash(_('Your credential has been saved in your wallet'), 'success')
-	if request.args.get('flash_message') == "credential_refused" :
+	elif request.args.get('flash_message') == "credential_refused" :
 		flash(_('Your cannot download this credential'), 'warning')
+	elif request.args.get('flash_message') == "server_error" :
+		flash(_('Server error'), 'warning')
+	else :
+		pass
+	if request.args.get('refresh') == "yes" :
+		refresh = True
+	else :
+		refresh = False
+
 	
-	if not session.get('uploaded') :
+	if not session.get('uploaded') or refresh :
 		logging.info('start first instanciation')
 		# for wallet direct access
 		issuer_username = None
@@ -393,34 +403,6 @@ def user(mode) :
 	else :
 		session['check_identity_key'] = True
 
-	# Partners
-	if not session['partner'] :
-		my_partner = """<a class="text-info">No Partners available</a>"""
-	else :
-		my_partner = ""
-		for partner in session['partner'] :
-			if partner['authorized'] == 'Pending' :
-				partner_html = """
-				<span><a href="/user/issuer_explore/?issuer_username="""+ partner['username'] + """">"""+ partner['username'] + """</a>  (""" + partner['authorized'] + """ - """ +   partner['status'] +   """ )
-					<a class="text-secondary" href="/user/reject_partner/?partner_username=""" + partner['username'] +"""&amp;partner_workspace_contract=""" + partner['workspace_contract']+"""">
-						<i data-toggle="tooltip" class="fa fa-thumbs-o-down" title="Reject this Partnership.">&nbsp&nbsp&nbsp</i>
-					</a>
-					<a class="text-secondary" href="/user/authorize_partner/?partner_username=""" + partner['username'] + """&amp;partner_workspace_contract=""" + partner['workspace_contract']+ """">
-						<i data-toggle="tooltip" class="fa fa-thumbs-o-up" title="Authorize this Parnership."></i>
-					</a>
-				</spn>"""
-			elif partner['authorized'] == 'Removed' :
-				partner_html = """
-				<span><a href="/user/issuer_explore/?issuer_username="""+ partner['username'] + """">"""+ partner['username'] + """</a>  (""" + partner['authorized'] + """ - """ +   partner['status'] +   """ )
-				</spn>"""
-			else :
-				partner_html = """
-				<span><a href="/user/issuer_explore/?issuer_username="""+ partner['username'] + """">"""+ partner['username'] + """</a>  (""" + partner['authorized'] + """ - """ +   partner['status'] +   """ )
-					<a class="text-secondary" href="/user/remove_partner/?partner_username=""" + partner['username'] +"""&amp;partner_workspace_contract=""" + partner['workspace_contract']+"""">
-						<i data-toggle="tooltip" class="fa fa-trash-o" title="Remove this Partnership.">&nbsp&nbsp&nbsp</i>
-				</spn>"""
-			my_partner = my_partner + partner_html + """<br>"""
-
 	# Issuer for document, they have an ERC725 key 20002
 	if not session['issuer']  :
 		my_issuer = """  <a class="text-info">""" + _('No Referents available') + """</a>"""
@@ -440,81 +422,9 @@ def user(mode) :
 				</span>"""
 			my_issuer = my_issuer + issuer_html + """<br>"""
 
-	# files
-	if not session['identity_file'] :
-		my_file = """<a class="text-info">""" + _('No Files available') + """</a>"""
-	else :
-		my_file = ""
-		for one_file in session['identity_file'] :
-			file_html = """
-				<b>File Name</b> : """+one_file['filename']+ """ ( """+ one_file['privacy'] + """ ) <br>
-				<b>Created</b> : """+ one_file['created'] + """<br>
-				<p>
-					<a class="text-secondary" href="/user/remove_file/?file_id=""" + one_file['id'] + """&filename="""+one_file['filename'] +"""">
-						<i data-toggle="tooltip" class="far fa-trash-alt" title="Remove">&nbsp&nbsp&nbsp</i>
-					</a>
-
-					<a class="text-secondary" href=/user/download/?filename=""" + one_file['filename'] + """>
-						<i data-toggle="tooltip" class="fa fa-download" title="Download"></i>
-					</a>
-				</p>"""
-			my_file = my_file + file_html
-
-	# skills
-	if not session['skills'] or not session['skills'].get('id') :
-		my_skills =  """<a class="text-info">""" + _('No data available') + """</a>"""
-	else :
-		my_skills = ""
-		for skill in session['skills']['description'] :
-			skill_html = skill['skill_name'] + """ (""" + skill['skill_level'] + """)""" + """<br>"""
-			my_skills = my_skills + skill_html
-		my_skills = my_skills + """
-				<p>
-				</p>"""
-
 
 	# specific to person
 	if session['type'] == 'person' :
-		# experience
-		my_experience = ""
-		if not session['experience'] :
-			my_experience = my_experience + """<a class="text-info">""" + _('No Experience available') + """</a>"""
-		else :
-			for experience in sorted(session['experience'], key= lambda d: time.strptime(d['start_date'], "%Y-%m-%d"), reverse=True) :
-				if not experience['end_date'] :
-					end_date = "Current"
-				else :
-					end_date = experience['end_date']
-				exp_html = """
-				<b>""" + _('Company') + """</b> : """ + experience['company']['name'] + """<br>
-				<b>""" + _('Title') + """</b> : """ + experience['title'] + """<br>
-				<b>""" + _('Start Date') + """</b> : """ + experience['start_date'] + """<br>
-					<b>""" + _('End Date') + """</b> : """ + end_date + """<br>
-				<b>""" + _('Description') + """</b> : """ + experience['description'][:100] + """...<br>
-				<p>
-					<a class="text-secondary" href="/user/remove_experience?experience_id=""" + experience['id'] + """">
-						<i data-toggle="tooltip" class="far fa-trash-alt" title="Remove">&nbsp&nbsp&nbsp</i>
-					</a>
-				</p>"""
-				my_experience = my_experience + exp_html + "<hr>"
-
-		# education
-		my_education = ""
-		if not session['education'] :
-			my_education = my_education + """<a class="text-info">""" + _('No Education available') + """</a>"""
-		else :
-			for education in session['education'] :
-				edu_html = """
-				<b>""" + _('Organization') + """</b> : """+education['organization']['name']+"""<br>
-				<b>""" + _('Title') + """</b> : """+education['title'] + """<br>
-				<b>""" + _('Start Date') + """</b> : """+education['start_date']+"""<br>
-				<b>""" + _('End Date') + """</b> : """+education['end_date']+"""<br>
-				<p>
-					<a class="text-secondary" href="/user/remove_education?education_id=""" + education['id'] + """">
-						<i data-toggle="tooltip" class="far fa-trash-alt" title="Remove">&nbsp&nbsp&nbsp</i>
-					</a>
-				</p>"""
-				my_education = my_education + edu_html	+ "<hr>"
 
 		# personal
 		TOPIC = {'firstname' : _('Firstname'),
@@ -532,30 +442,10 @@ def user(mode) :
 				text = session['personal'][topicname]['claim_value'] + ' (' + session['personal'][topicname]['privacy'] + ')'
 				my_personal += """<b>""" + TOPIC[topicname] + """</b> : """+ text + """<br>"""
 
-		# Alias
-		if session['username'] != ns.get_username_from_resolver(session['workspace_contract'], mode) :
-			display_alias = False
-			my_access = ""
-		else :
-			display_alias = True
-			my_access = ""
-			access_list = ns.get_alias_list(session['workspace_contract'], mode)
-			for access in access_list :
-				if access['username'] == session['username'] :
-					access_html = """
-					<span>""" + session['username'] + """ (logged)
-					</span>"""
-				else :
-					access_html = """
-					<span>""" + access['username'] + """ : """ +  access['email'] +"""
-						<a class="text-secondary" href="/user/remove_access/?alias_to_remove="""+ access['username']+"""">
-							<i data-toggle="tooltip" class="fa fa-trash-o" title="Remove">	</i>
-						</a>
-					</span>"""
-				my_access +=  access_html + """<br>"""
-
 		# credentials/certificates
 		credential_text = {'IdentityPass' : _('Identity pass'),
+				'ProfessionalStudentCard' : _('Student Card'),
+				'Ecole42LearningAchievement' : _('Certificate of completion'),
                 'ProfessionalExperienceAssessment' : _('Professional experience assessment'),
                 'skill' : _('Skill certificate'),
                 'training' : _('Training certificate'),
@@ -582,7 +472,7 @@ def user(mode) :
 						issuer_currentAddress = _("No data available")
 					cert_html = """<hr>
 						<b>""" + _('Credential Type') + """</b> : """ + credential_text.get(certificate['credentialSubject']['type'], "Not supported") + """<br>
-						<b>""" + _('Credential Privacy') + """</b> : """ + certificate['privacy'].capitalize() + """<br>
+					<!--	<b>""" + _('Credential Privacy') + """</b> : """ + certificate['privacy'].capitalize() + """<br>  -->
 						<b>""" + _('Issuer legal name') + """</b> : """ + issuer_legalName +"""<br>
 						<b>""" + _('Issuer current address') + """</b> : """ + issuer_currentAddress +"""<br>
 					<!--	<b>""" + _('Issuer DID') + """</b> : """ + certificate['issuer'] +"""<br>  -->
@@ -601,43 +491,39 @@ def user(mode) :
 					id = ""
 					credential_id = ""
 				
-				cert_html += """<b></b><a href= """ + mode.server +  """certificate/?certificate_id=did:talao:""" + mode.BLOCKCHAIN + """:""" + session['workspace_contract'][2:] + """:document:""" + str(certificate['doc_id']) + """>""" + _('Display Credential') + """</a><br>"""
+				#cert_html += """<b></b><a href= """ + mode.server +  """certificate/?certificate_id=did:talao:""" + mode.BLOCKCHAIN + """:""" + session['workspace_contract'][2:] + """:document:""" + str(certificate['doc_id']) + """>""" + _('Display Credential') + """</a><br>"""
 				
-				cert_html += """<b></b><a href= """ + mode.server +  """credible/credentialOffer/""" + credential_id + """>""" + _('Download to your smartphone wallet') + """</a><br>"""				
+				#cert_html += """<b></b><a href= """ + mode.server +  """credible/credentialOffer/""" + credential_id + """>""" + _('Download to your smartphone wallet') + """</a><br>"""				
 				cert_html += """<p>
 					<a class="text-secondary" href="/user/remove_certificate/?certificate_id=""" + certificate['id'] + """">
 					<i data-toggle="tooltip" class="far fa-trash-alt" title="Remove">&nbsp&nbsp&nbsp</i>
 					</a>
 
 					<a class="text-secondary" href=/data/?dataId=""" + certificate['id'] + """:certificate>
-					<i data-toggle="tooltip" class="fa fa-search-plus" title="Credential data">&nbsp&nbsp&nbsp</i>
-					</a>"""
-
-			
-				cert_html += """<a class="text-secondary" onclick="copyToClipboard('#p"""+ str(counter) + """')">
-					<i data-toggle="tooltip" class="fa fa-clipboard" title="Copy Credential Link">&nbsp&nbsp&nbsp</i>
-					</a>"""
-
-				cert_html += """<a class="text-secondary" href=/user/swap_privacy/?certificate_id=""" + certificate['id'] + """&privacy=""" + certificate['privacy'] +  """>
-					<i data-toggle="tooltip" title="Change privacy" class="fas fa-redo" >&nbsp&nbsp&nbsp</i>
+					<i data-toggle="tooltip" class="fas fa-download" title="Check certificate and download">&nbsp&nbsp&nbsp</i>
 					</a>
 
-					</p>
-					<p hidden id="p""" + str(counter) + """" >""" + mode.server  + """guest/certificate/?certificate_id=did:talao:""" + mode.BLOCKCHAIN + """:""" + session['workspace_contract'][2:] + """:document:""" + str(certificate['doc_id']) + """</p>"""
+					<a class="text-secondary" href= """ + mode.server +  """wallet_download/credentialOffer/""" + credential_id  + """>
+					<i data-toggle="tooltip" class="fas fa-mobile" title="Download to mobile wallet">&nbsp&nbsp&nbsp</i>
+					</a>"""
+			
+				#cert_html += """<a class="text-secondary" onclick="copyToClipboard('#p"""+ str(counter) + """')">
+				#	<i data-toggle="tooltip" class="fa fa-clipboard" title="Copy Credential Link">&nbsp&nbsp&nbsp</i>
+				#	</a>"""
+
+				#cert_html += """<a class="text-secondary" href=/user/swap_privacy/?certificate_id=""" + certificate['id'] + """&privacy=""" + certificate['privacy'] +  """>
+				#	<i data-toggle="tooltip" title="Change privacy" class="fas fa-redo" >&nbsp&nbsp&nbsp</i>
+				#	</a>	
+				#	</p>
+				#	<p hidden id="p""" + str(counter) + """" >""" + mode.server  + """guest/certificate/?certificate_id=did:talao:""" + mode.BLOCKCHAIN + """:""" + session['workspace_contract'][2:] + """:document:""" + str(certificate['doc_id']) + """</p>"""
+				
 				my_certificates += cert_html
 
 		return render_template('person_identity.html',
 							**session['menu'],
-							display_alias = display_alias,
 							personal=my_personal,
-							experience=my_experience,
-							education=my_education,
-							skills=my_skills,
 							certificates=my_certificates,
-							access=my_access,
-							partner=my_partner,
 							issuer=my_issuer,
-							digitalvault= my_file,
 							nb_certificates=len(session['all_certificate'])
 							)
 	# specific to company
@@ -807,7 +693,7 @@ def user(mode) :
 							issuer=my_issuer,
 							certificates=my_certificates,
 							company_campaign=my_campaign,
-							digitalvault=my_file)
+							)
 
 
 def user_advanced(mode) :

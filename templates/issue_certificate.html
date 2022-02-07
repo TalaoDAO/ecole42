@@ -15,28 +15,25 @@
                 {% else %}
                     {% include 'manager_nav_bar.html' %}
                 {% endif %}
-        <div class="container-fluid mt-3">
+        <div class="container-fluid mt-5">
             <div class="row mb-3">
                 <div class="col-lg-8 col-xl-4 offset-xl-4">
                     <div class="card shadow mb-3">
                         <div class="card-header py-3">
-                            <p class="text-primary m-0 font-weight-bold">&nbsp;Issue a Credential</p>
+                            <p class="text-primary m-t2 font-weight-bold">&nbsp;Issue a Certificate</p>
                         </div>
                         <div class="card-body">
                             <form action="/user/issue_certificate/" method="post">
                                 <div class="form-row">
                                     <div class="col">
                                         <p>Select the type of credential :</p>
-                                        <div class="form-group"><label data-toggle="tooltip" data-bs-tooltip="" title="wallet texte"><strong>Credential Type</strong><br></label>
+                                        <div class="form-group"><label data-toggle="tooltip" data-bs-tooltip="" title="wallet texte"><strong>Certificates Type</strong><br></label>
                                         <select class="form-control" name="certificate_type">
-										{% if session["issuer_explore"]["type"] == "person"  %}
-                                            <option value="experience" >Professional Experience</option>
-                                            <option value="recommendation">Recommendation</option>
-										{% else %}
-                                            <option value="reference" >Reference</option>
-                                            <option value="ccicertificate" >Certificat UdF (avec évaluation)</option>
-                                            <option value="ccicertificate_v2" >Certificat UdF (avec avis)</option>
-                                        {% endif %}
+                                            <option value="studentcard" >Student card</option>
+                                            <option value="completion" >Certificate of completion</option>
+                                            <option value="certificate1" >Certificate 1</option>
+                                            <option value="badge1">Badge 1</option>
+                                            <option value="badge2" >Badge 2</option>
                                         </select></div>
                                     </div>
                                 </div>

@@ -13,19 +13,21 @@
         {% include 'company_nav_bar.html' %}
 
         <div class="container-fluid mt-3">
-          <div class="row mb-3">
+          <h3 class="text-dark mb-4">{{name}}</h3>
+          <h6 class="text-dark mb-4">{{session['role']}}</h6>
+          <div class="row mt-5">
             <div class="col-lg-8 col-xl-4 offset-lg-2 offset-xl-4">
               <div class="card shadow mb-3">
                 <div class="card-header py-3">
-                  <p class="text-primary m-0 font-weight-bold">&nbsp;Create a Company</p>
+                  <p class="text-primary m-0 font-weight-bold">&nbsp;Create a Campus</p>
                 </div>
                 <div class="card-body">
                   <form id="form" action="/user/create_company/" method="post">
                     <div class="form-row">
                       <div class="col">
-                        <p class="text-left">Attention attendre la fin du process qui prend quelques minutes.</p>
+                        <p class="text-left"></p>
                         <div class="form-group">
-                          <label><strong>Company name&nbsp;</strong><br></label>
+                          <label><strong>Campus name&nbsp;</strong><br></label>
                           <input class="form-control" type="text" required name="name">
                         </div>
 
