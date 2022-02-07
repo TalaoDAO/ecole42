@@ -29,7 +29,7 @@ import environment
 mychain = os.getenv('MYCHAIN')
 myenv = os.getenv('MYENV')
 if not myenv :
-   myenv='liveboxh2'
+   myenv='liveboxw'
 mychain = 'talaonet'
 
 logging.info('start to init environment')
