@@ -24,7 +24,6 @@ def init_app(app,red, mode) :
     app.add_url_rule('/wallet_download/save_stream',  view_func=download_save_stream, methods = ['GET', 'POST'], defaults={'red' : red})
     global did_ecole42
     did_ecole42 =  ns.get_did(WORKSPACE_ECOLE42, mode)
-    print("did ecole 42 = ", did_ecole42)
     return
 
 
@@ -52,7 +51,11 @@ def credential_display(id):
 def credentialOffer(id, red, mode):
     global did_ecole42
     filename = id + "_ecole42.jsonld"
-    credential = json.loads(open('./to_be_signed_credentials/' + filename, 'r').read())
+    try :
+        credential = json.loads(open('./to_be_signed_credentials/' + filename, 'r').read())
+    except :
+        logging.error('file not found')
+        return jsonify("server error"), 500
     credential['issuer'] = did_ecole42
     # Attention c est déja signé !!!!
     if request.method == 'GET':

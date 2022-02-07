@@ -21,10 +21,9 @@ import didkit
 
 PRESENTATION_DELAY = 600 # seconds
 
-DID_WEB = 'did:web:talao.cp'
-DID_ETHR = 'did:ethr:0xee09654eedaa79429f8d216fa51a129db0f72250'
-DID_TZ = 'did:tz:tz2NQkPq3FFA3zGAyG8kLcWatGbeXpHMu7yk'
-DID_KEY =  'did:key:zQ3shWBnQgxUBuQB2WGd8iD22eh7nWC4PTjjTjEgYyoC3tjHk'                      
+# Ecole 42
+DID_ETHR = 'did:ethr:0x6Ad8372F03d2b16701c9989d3043fE27C1f8e2FE'
+DID_TZ = 'did:tz:tz2CWTBwgUbs1BMXAjzUvrEk8gRhS6eLqzRD'
 
 logging.basicConfig(level=logging.INFO)
 

@@ -23,7 +23,6 @@ import redis
 import logging
 logging.basicConfig(level=logging.INFO)
 
-
 # Environment variables set in gunicornconf.py  and transfered to environment.py
 import environment
 mychain = os.getenv('MYCHAIN')
@@ -42,11 +41,11 @@ red= redis.Redis(host='localhost', port=6379, db=0)
 # Centralized  routes : modules in ./routes
 from routes import web_register, web_certificate, web_issuer, web_directory
 from routes import web_data_user, web_skills, web_external, web_issuer_explore, web_revocationlist
-from routes import web_main, web_login, repository, web_wallet_download,  web_tiar, web_app
+from routes import web_main, web_login, repository, web_wallet_download,  web_app
 
 #BUNNEY Calum <calum.bunney@nexusgroup.com>
 # Server Release
-VERSION = '0.3.1'
+VERSION = '0.3.2'
 logging.info('Ecole42 version : %s', VERSION)
 
 # Framework Flask and Session setup
@@ -112,7 +111,6 @@ web_issuer_explore.init_app(app, mode)
 web_data_user.init_app(app,red,mode)
 web_issuer.init_app(app, mode)
 web_revocationlist.init_app(app, red, mode)
-web_tiar.init_app(app)
 web_app.init_app(app, red, mode)
 logging.info('end init routes')
 
