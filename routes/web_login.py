@@ -344,7 +344,7 @@ def wallet_endpoint(stream_id, red, mode):
 								"code" : "ko",
 								 "message" : _('Delay has expired.')})
         red.publish('credible', event_data)
-        jsonify ("Delay has expired"), 408
+        return jsonify ("Delay has expired"), 408
     if request.method == 'GET':
         
         did_auth_request = {
@@ -361,7 +361,7 @@ def wallet_endpoint(stream_id, red, mode):
         did_auth_request["domain"] = mode.server
         return jsonify(did_auth_request)
     elif request.method == 'POST' :
-        #red.delete(stream_id)
+        red.delete(stream_id)
         presentation = json.loads(request.form['presentation'])       
         logging.info('verify presentation = ' + didkit.verify_presentation(json.dumps(presentation), '{}'))
         """
@@ -408,7 +408,7 @@ def wallet_endpoint(stream_id, red, mode):
 			                        "message" : "ok",
 			                        "token" : generate_token(holder, session_data['issuer_username'], session_data['vc'],mode)})
             red.publish('credible', event_data)
-            return jsonify("ok"), 201
+            return jsonify("ok"), 200
 
 
 def event_stream(red):
@@ -428,7 +428,7 @@ def stream(red):
 
 def callback() :
     credential = 'holder : ' + request.args['holder'] + ' issuer : ' + request.args['issuer']
-    return render_template('credible/credential.html', credential=credential)
+    return render_template('download/credential.html', credential=credential)
 
 
 def generate_token(did,issuer_username, vc, mode) :
