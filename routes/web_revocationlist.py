@@ -3,8 +3,7 @@ import json
 from datetime import timedelta, datetime
 from signaturesuite import vc_signature
 from components import privatekey
-from github import Github
-import base64
+
 import uuid
 import logging
 from flask_babel import Babel, _
