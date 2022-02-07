@@ -151,9 +151,11 @@ def homepage() :
 
 def translate_credentials() :
 	return {'pass_txt' : _('Student card'),
-		'certificate_1_txt' : _('Badge'),
-		'certificate_2_txt' : _('Year certificate'),
-		'certificate_3_txt' : _('Training certificate'),
+		'certificate_1_txt' : _('Certificate of completion 42'),
+		'certificate_2_txt' : _('Certificate A'),
+		'certificate_3_txt' : _('Certificate B'),
+        	'certificate_4_txt' : _('Badge A'),
+            	'certificate_5_txt' : _('Badge B'),
         }
 
 
