@@ -348,6 +348,7 @@ def get_username_from_wallet(wallet, mode) :
 
 def get_method(workspace_contract, mode) :
 	path = mode.db_path
+	print("nameservice db path = ", path + 'nameservice.db')
 	conn = sqlite3.connect(path + 'nameservice.db')
 	c = conn.cursor()
 	data = {'workspace_contract' : workspace_contract}
