@@ -62,20 +62,21 @@ class currentMode() :
 		else :
 			self.sys_path = '/home/thierry'
 
-		self.keystore_path = self.sys_path + '/Talao/keystore/'
-		self.Ed25519_path = self.sys_path + '/Talao/keystore_Ed25519/'
-		self.P256_path = self.sys_path + '/Talao/keystore_P256/'
+		self.keystore_path = self.sys_path + '/ecole42/keystore/'
+		self.Ed25519_path = self.sys_path + '/ecole42/keystore_Ed25519/'
+		self.P256_path = self.sys_path + '/ecole42/keystore_P256/'
 		self.db_path = self.sys_path + '/db/talaonet/'
-		self.help_path = self.sys_path + '/Talao/templates/'
-		self.uploads_path = self.sys_path + '/Talao/uploads/'
-		self.verifiable_credentials = self.sys_path + '/Talao/verifiable_credentials/'
+		self.help_path = self.sys_path + '/ecole42/templates/'
+		self.uploads_path = self.sys_path + '/ecole42/uploads/'
+		self.verifiable_credentials = self.sys_path + '/ecole42/verifiable_credentials/'
 
 		# En Prod chez AWS avec Talaonet
 		if self.myenv == 'aws':
-			self.server = 'https://talao.co/'
+			self.server = 'https://ecole42.talao.co/'
 			self.IPCProvider = '/home/admin/Talaonet/node1/geth.ipc'
 			self.w3 = Web3(Web3.IPCProvider("/home/admin/Talaonet/node1/geth.ipc", timeout=20))
-			self.IP = '18.190.21.227' # talao.co
+			self.IP = '18.190.21.227' # ecole42.talao.co
+
 
 		# sur PC portable thierry connecté avec airbox
 		elif self.myenv == 'airbox' :
