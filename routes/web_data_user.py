@@ -750,16 +750,13 @@ def user_advanced(mode) :
 		logging.warning('No DID available in local database')
 		did = DID_Document = _("No DID available")
 	else :
-		#if did.split(':')[1]  in ['tz', 'ethr', 'key'] :
-		#	# did:tz has no driver for Universal resolver
-		#	DID_Document = json.dumps(json.loads(didkit.resolve_did(did,'{}')), indent=4)
-		#else  :
 		resolver = 'https://resolver.identity.foundation/'
 		r = requests.get( resolver + did)
 		if r.status_code == 200 :
 			DID_Document = json.dumps(r.json(), indent=4)
 		else :
 			logging.warning('DID Document resolution has been rejected by Universal Resolver.')
+			DID_Document = "Unknown"
 
 	# portfolio data
 	role = session['role'] if session.get("role") else 'None'

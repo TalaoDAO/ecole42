@@ -46,7 +46,7 @@ from routes import web_main, web_login, repository, web_wallet_download,  web_ti
 
 #BUNNEY Calum <calum.bunney@nexusgroup.com>
 # Server Release
-VERSION = '0.2.0'
+VERSION = '0.2.1'
 logging.info('Ecole42 version : %s', VERSION)
 
 # Framework Flask and Session setup

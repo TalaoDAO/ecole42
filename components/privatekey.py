@@ -177,6 +177,7 @@ def get_key(address, key_type, mode, address_caller=None) :
 		return helpers.ethereum_to_jwk(pvk, mode)
 
 	if key_type == 'private_key' :
+		print('PRIVATE KEY = ', mode.keystore_path + address[2:] + '.json')
 		try :
 			fp = open(mode.keystore_path + address[2:] + '.json', 'r')
 		except :

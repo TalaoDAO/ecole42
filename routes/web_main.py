@@ -459,7 +459,7 @@ def issue_certificate(mode):
     check_login()
     if not session['private_key'] :
         flash(_('We do not have your Private Key to issue a Certificate.'), 'warning')
-        return redirect(mode.server + 'user/issuer_explore/?issuer_username=' + session['issuer_username'])
+        return redirect(mode.server + 'user/')
 
     #if session['type'] == 'company' and session['issuer_explore']['type'] == 'person' :
     #    flash(_('Talent is required to make a formal request.'), 'warning')
