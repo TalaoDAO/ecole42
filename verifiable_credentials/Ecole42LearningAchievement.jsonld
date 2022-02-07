@@ -36,6 +36,7 @@
                         "@context" : {
                             "@version": 1.1,
                             "@protected": true,
+                            "level" : "schema:identifier",
                             "title": "schema:title",
                             "description": "schema:description",
                             "inDefinedTermSet" : "schema:inDefinedTermSet"
@@ -95,7 +96,8 @@
         "hasCredential": {
             "title":  "Certificate of Completion 42",
             "description" : "Curriculum of architect in digital technologies",
-            "inDefinedTermSet" : "https://talao.io/vocab_tobedefined"
+            "inDefinedTermSet" : "https://talao.io/vocab_tobedefined",
+            "level" : "12"
         },
         "issuedBy" : {
             "name": "Association 42",
