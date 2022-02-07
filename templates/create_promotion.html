@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--cretae_promotion.html-->
+<html>
+
+<head>
+  {% include 'head.html' %}
+ 
+</head>
+
+<body id="page-top">
+  <div id="wrapper">
+    <div class="d-flex flex-column" id="content-wrapper">
+      <div id="content">
+        {% include 'company_nav_bar.html' %}
+
+        <div class="container-fluid mt-3">
+          <h3 class="text-dark mb-4">{{name}}</h3>
+          <h6 class="text-dark mb-4">{{session['role']}}</h6>
+          <div class="row mt-5">
+            <div class="col-lg-8 col-xl-4 offset-lg-2 offset-xl-4">
+              <div class="card shadow mb-3">
+                <div class="card-header py-3">
+                  <p class="text-primary m-0 font-weight-bold">&nbsp;Create a Promotion</p>
+                </div>
+                <div class="card-body">
+                  <form id="form" action="/user/create_company/" method="post">
+                    
+                    
+                    <div class="form-row">
+                      <div class="col">
+                            <p class="text-left"></p>
+                            <div class="form-group">
+                                <label><strong>Promotion name&nbsp;</strong><br></label>
+                                <input class="form-control" type="text" required name="name">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-6">                  
+                            <div class="form-group">
+                                <label ><strong>Promotion year</strong><br></label>
+                                <select name="promotion_year" class="form-control"><br>
+                                <option selected value="2022">2022</option>
+                                <option value="2021">2021</option>
+                                <option value="2020">2020</option>
+                                <option value="2019">2019</option>
+                                <option value="2018">2018</option>
+                                <option value="2017">2017</option>
+                                <option value="2016">2016</option>
+                                <option value="2015">2015</option>
+                                <option value="2014">2014</option>
+                                <option value="2013">2013</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                 <label ><strong>CSV file name</strong><br></label>
+                                <input class="form-control" type="text" name="csv_file_name">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="col-6 col-xl-3">
+                        <div class="form-group"><button id="in_progress_button" class="btn btn-primary btn-sm" type="submit">Create</button></div>
+                      </div>
+                      <div class="col-6 col-xl-3">
+                        <a href="/user/">
+                          <div class="form-group"><button class="btn btn-primary btn-sm" type="button">Cancel</button></div>
+                        </a>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% include 'user_footer.html' %}
+  </div>
+  <script src="{{ url_for('static', filename='sending_button.js') }}"></script>
+  <script src="{{ url_for('static', filename='jquery-3.5.1.slim.min.js') }}"></script>
+   <script src="{{ url_for('static', filename='bs-init.js') }}"></script>
+   <script src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+   <script src="{{ url_for('static', filename='in_progress_button.js') }}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% include 'head.html' %}
+  
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                                               {% include 'company_nav_bar.html' %}
+                <div class="container-fluid">
+                    <div class="row mt-5">
+                        <div class="col-4 offset-4">
+
+                            <div class="card shadow mb-3">
+                                <div class="card-header py-3">
+                                    <p class="text-primary m-0 font-weight-bold">&nbsp;Issue certificates of completion</p>    
+                                </div>
+
+                            <div class="card-body">
+
+                                <form action="/user/issue_completion/" method="post">
+                                
+                   
+                    <div class="form-row">
+                        <div class="col-6">                  
+                            <div class="form-group">
+                                <label ><strong>Student name</strong><br></label>
+                                <select name="username" class="form-control"><br>
+                                <option selected value="pierreaniel">Pierre Aniel</option>
+                                <option value="thierrythevenet">Thierry Thevenet</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                 <label ><strong>or enter a CSV file name</strong><br></label>
+                                <input class="form-control" type="text" name="csv_file_name">
+                            </div>
+                        </div>
+                    </div>
+
+                                
+
+                                
+                        
+                                <div class="form-row">
+                                    <div class="col-6">
+                                        <div class="form-group"><button class="btn btn-primary btn-sm" type="submit">Next</button></div>
+                                    </div>
+                                    <div class="col-6">
+										<a href="/user/">
+                                        <div class="form-group"><button class="btn btn-primary btn-sm" type="button">Cancel</button></div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+                                  {% include 'user_footer.html' %}
+    <script>function goBack() { window.history.back();}
+</script>
+   <script src="{{ url_for('static', filename='chart.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='bs-init.js') }}"></script>
+    <script src="{{ url_for('static', filename='theme.js') }}"></script>
+     <script src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+</body>
+
+</html>

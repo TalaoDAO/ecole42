@@ -1,0 +1,115 @@
+{
+    "@context": [
+        "https://www.w3.org/2018/credentials/v1",
+        {
+            "name": "https://schema.org/name",
+            "description": "https://schema.org/description",
+            "ProfessionalStudentCard": {
+                "@id": "https://github.com/TalaoDAO/context/blob/main/README.md",
+                "@context": {
+                    "@version": 1.1,
+                    "@protected": true,
+                    "schema": "https://schema.org/",
+                    "id": "@id",
+                    "type": "@type",
+                    "recipient": {
+                        "@id": "schema:recipient",
+                        "@context": {
+                            "@version": 1.1,
+                            "@protected": true,
+                            "schema": "https://schema.org/",
+                            "image": {
+                                "@id": "schema:image",
+                                "@type": "@id"
+                            },
+                            "givenName": "schema:givenName",
+                            "familyName": "schema:familyName",
+                            "birthDate": "schema:birthDate",
+                            "signatureLines": {
+                                "@id": "https://github.com/blockchain-certificates/cert-schema/blob/master/docs/signatureLineExtension_schema.md",
+                                "@context": {
+                                    "@protected": true,
+                                    "@version": 1.1,
+                                    "image": {
+                                        "@id": "schema:image",
+                                        "@type": "@id"
+                                    },
+                                    "schema": "https://schema.org/"
+                                }
+                            }
+                        }
+                    },
+                    "issuedBy": {
+                        "@id": "schema:issuedBy",
+                        "@context": {
+                            "@version": 1.1,
+                            "@protected": true,
+                            "schema": "https://schema.org/",
+                            "name": "schema:name",
+                            "directorName": "schema:name",
+                            "address": "schema:address",
+                            "logo": {
+                                "@id": "schema:logo",
+                                "@type": "@id"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "id": "data:71bc3738-8693-11ec-a3f5-e32f811bc2e4",
+    "type": [
+        "VerifiableCredential",
+        "ProfessionalStudentCard"
+    ],
+    "issuer": "did:ethr:0x6ad8372f03d2b16701c9989d3043fe27c1f8e2fe",
+    "name": [
+        {
+            "@value": "Studient card",
+            "@language": "en"
+        },
+        {
+            "@value": "Firmenpass",
+            "@language": "de"
+        },
+        {
+            "@value": "Carte etudiant",
+            "@language": "fr"
+        }
+    ],
+    "description": [
+        {
+            "@language": "en",
+            "@value": "It is a credential issued by a university."
+        },
+        {
+            "@language": "de",
+            "@value": "Es ist ein von einem Unternehmen oder einer Organisation ausgestellter Berechtigungsnachweis. Es kann zur Authentifizierung bei Firmendiensten (Zugangsausweis, Informationssystem) oder bei Dritten, die Dienstleistungen für Firmenmitarbeiter anbieten, verwendet werden."
+        },
+        {
+            "@language": "fr",
+            "@value": "Il s'agit d'un titre délivré par une organisation de formation."
+        }
+    ],
+    "issuanceDate": "2022-02-05T14:53:56Z",
+    "credentialSubject": {
+        "id": "did:tz:tz28MF5CWbr2oyinHHFQ2bRSu4uFBHdgfVev",
+        "type": "ProfessionalStudentCard",
+        "recipient": {
+            "image": "https://talao.mypinata.cloud/ipfs/QmQvcvmQ19qbtbwLmaMATnjNJ1TSCyV6ZvWEjtwXhT7co4",
+            "birthDate": "1991-12-10T12:02:55.268Z",
+            "familyName": "Aniel",
+            "givenName": "Pierre",
+            "signatureLines": {
+                "image": "https://gateway.pinata.cloud/ipfs/QmeMfck3z6K5p8xmCqQpjH3R7s3YddR5DsMNLewWvzQrFS"
+            }
+        },
+        "issuedBy": {
+            "name": "Ecole 42",
+            "directorName": "Sophie Vigier",
+            "address": "96 Boulevard Bessières, 75017 Paris",
+            "logo": "https://talao.mypinata.cloud/ipfs/QmRv2vD6AGiHPDhfqgLFcWYfy4Xy84yNq6wMGdgJTjZc3S"
+        }
+    }
+}
