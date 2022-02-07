@@ -56,7 +56,7 @@ def tir_api(did) :
                     "currentAddress": "96 Boulevard Bessières, 75017 Paris",
                     "vatNumber": "FR26837674480",
                     "website": "https://42.fr",
-                    "issuerDomain" : ["talao.co", "talao.io"]
+                    "issuerDomain" : ["ecole42.talao.co"]
                 }
             }
         })
