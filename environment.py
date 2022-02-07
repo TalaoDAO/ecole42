@@ -65,7 +65,7 @@ class currentMode() :
 		self.keystore_path = self.sys_path + '/ecole42/keystore/'
 		self.Ed25519_path = self.sys_path + '/ecole42/keystore_Ed25519/'
 		self.P256_path = self.sys_path + '/ecole42/keystore_P256/'
-		self.db_path = self.sys_path + '/db/talaonet/'
+		self.db_path = self.sys_path + '/dbecole42/talaonet/'
 		self.help_path = self.sys_path + '/ecole42/templates/'
 		self.uploads_path = self.sys_path + '/ecole42/uploads/'
 		self.verifiable_credentials = self.sys_path + '/ecole42/verifiable_credentials/'
