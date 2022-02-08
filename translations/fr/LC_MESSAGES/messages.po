@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Issuer Talao \n"
 "Report-Msgid-Bugs-To: Thierry Thevenet\n"
-"POT-Creation-Date: 2021-11-20 17:59+0100\n"
+"POT-Creation-Date: 2022-02-08 14:59+0100\n"
 "PO-Revision-Date: 2021-06-13 21:22+0200\n"
 "Last-Translator: Thierry Thevenet\n"
 "Language: fr\n"
@@ -20,29 +20,21 @@ msgstr ""
 
 #: components/Talao_message.py:74
 msgid ""
-"A new Talao workspace has been deployed\r\n"
+"A new account has been deployed\r\n"
 "Username : "
 msgstr ""
-"Un nouveau portfolio a été déployé\r\n"
-"Mot de passe : "
+"Un nouveau compte a été déployé\r\n"
+"Nom utilisateur : "
 
-#: routes/web_credible.py:31
-msgid "This credential is not available."
-msgstr "Cette attestation n'est pas disponible."
-
-#: routes/web_credible.py:43
-msgid "No credential available."
-msgstr "Aucune attestation disponible."
-
-#: routes/web_data_user.py:86 routes/web_login.py:366
+#: routes/web_data_user.py:86
 msgid "Presentation check failed."
 msgstr "Echec de la vérification."
 
-#: routes/web_data_user.py:91 routes/web_login.py:373
+#: routes/web_data_user.py:91
 msgid "The presentation challenge failed."
 msgstr "Echec de la vérification du challenge."
 
-#: routes/web_data_user.py:96 routes/web_login.py:380
+#: routes/web_data_user.py:96
 msgid "This issuer is unknown."
 msgstr "Cet émetteur est inconnu."
 
@@ -54,105 +46,49 @@ msgstr "Votre Identité Numérique a été enregistrée."
 msgid "Your DID is already registered"
 msgstr "Cette Identité dispose déjà d'un portfolio."
 
-#: routes/web_data_user.py:221
+#: routes/web_data_user.py:222
 msgid "Your credential has been saved in your wallet"
 msgstr "L'attestation a été sauvegardée dans votre wallet."
 
-#: routes/web_data_user.py:223
+#: routes/web_data_user.py:224
 msgid "Your cannot download this credential"
 msgstr "Vous ne pouvez pas télécharger cette attestation."
 
-#: routes/web_data_user.py:245 routes/web_login.py:271
+#: routes/web_data_user.py:226
+msgid "Server error"
+msgstr "Erreur du serveur"
+
+#: routes/web_data_user.py:255 routes/web_login.py:274
 msgid "Incorrect data."
 msgstr "Données incorrectes."
 
-#: routes/web_data_user.py:250
+#: routes/web_data_user.py:260
 msgid "Delay expired !"
 msgstr "Code expiré !"
 
-#: routes/web_data_user.py:268
+#: routes/web_data_user.py:278
 msgid "session aborted"
 msgstr "session terminée"
 
-#: routes/web_data_user.py:353
+#: routes/web_data_user.py:363
 msgid "Company not found"
 msgstr "Entreprise non trouvée"
 
-#: routes/web_data_user.py:367
+#: routes/web_data_user.py:377
 msgid ""
 "No reviewers have been appointed yet for this request. Contact your "
 "company."
 msgstr ""
 
-#: routes/web_data_user.py:382
+#: routes/web_data_user.py:392
 msgid "Request malformed"
-msgstr ""
+msgstr "Request malformed"
 
-#: routes/web_data_user.py:426 routes/web_data_user.py:928
+#: routes/web_data_user.py:408 routes/web_data_user.py:811
 msgid "No Referents available"
 msgstr "Aucun référent disponible"
 
-#: routes/web_data_user.py:445
-msgid "No Files available"
-msgstr "Aucun fichier disponible"
-
-#: routes/web_data_user.py:465 routes/web_data_user.py:581
-#: routes/web_data_user.py:582 routes/web_issuer_explore.py:70
-#: templates/person_issuer_identity.html:260
-#: templates/person_issuer_identity.html:303
-#: templates/person_issuer_identity.html:346
-msgid "No data available"
-msgstr "Aucune donnée"
-
-#: routes/web_data_user.py:481
-msgid "No Experience available"
-msgstr "Aucune expérience disponible"
-
-#: routes/web_data_user.py:489 templates/add_activity.html:39
-#: templates/add_experience.html:39 templates/directory/directory.html:107
-#: templates/user_footer.html:28
-msgid "Company"
-msgstr "Entreprise"
-
-#: routes/web_data_user.py:490 routes/web_data_user.py:509
-#: routes/web_data_user.py:523 routes/web_data_user.py:750
-#: routes/web_data_user.py:772 templates/issuer/company_dashboard.html:84
-#: templates/issuer/issue_experience_credential_workflow.html:38
-#: templates/issuer/issue_identity_credential.html:37
-#: templates/issuer/request_experience_credential.html:31
-msgid "Title"
-msgstr "Titre"
-
-#: routes/web_data_user.py:491 routes/web_data_user.py:510
-#: routes/web_issuer_explore.py:158 routes/web_issuer_explore.py:281
-#: templates/add_activity.html:47 templates/add_education.html:47
-#: templates/add_experience.html:47
-msgid "Start Date"
-msgstr "Date de début"
-
-#: routes/web_data_user.py:492 routes/web_data_user.py:511
-#: routes/web_issuer_explore.py:159 routes/web_issuer_explore.py:282
-#: templates/add_education.html:50 templates/add_experience.html:50
-msgid "End Date"
-msgstr "Date de fin"
-
-#: routes/web_data_user.py:493 routes/web_data_user.py:751
-#: routes/web_data_user.py:773 routes/web_issuer_explore.py:161
-#: routes/web_issuer_explore.py:167 routes/web_issuer_explore.py:232
-#: routes/web_issuer_explore.py:490 routes/web_issuer_explore.py:569
-#: templates/issuer/company_dashboard.html:85
-msgid "Description"
-msgstr "Description"
-
-#: routes/web_data_user.py:504
-msgid "No Education available"
-msgstr "Aucune formation disponible"
-
-#: routes/web_data_user.py:508 templates/add_education.html:39
-msgid "Organization"
-msgstr "Organisation"
-
-#: routes/web_data_user.py:520
+#: routes/web_data_user.py:430
 #: templates/issuer/issue_identity_credential.html:42
 #: templates/issuer/issue_skill_credential.html:40
 #: templates/issuer/issue_work_credential.html:41
@@ -163,7 +99,7 @@ msgstr "Organisation"
 msgid "Firstname"
 msgstr "Prénom"
 
-#: routes/web_data_user.py:521
+#: routes/web_data_user.py:431
 #: templates/issuer/issue_identity_credential.html:45
 #: templates/issuer/issue_skill_credential.html:43
 #: templates/issuer/issue_work_credential.html:44
@@ -174,258 +110,229 @@ msgstr "Prénom"
 msgid "Lastname"
 msgstr "Nom"
 
-#: routes/web_data_user.py:522 routes/web_data_user.py:724
+#: routes/web_data_user.py:432 routes/web_data_user.py:610
 #: templates/company_issuer_identity.html:59
 #: templates/directory/directory.html:105
 #: templates/update_personal_settings.html:49 templates/user_footer.html:26
 msgid "About"
 msgstr "A propos"
 
-#: routes/web_data_user.py:524 templates/update_personal_settings.html:72
+#: routes/web_data_user.py:433 routes/web_data_user.py:636
+#: routes/web_data_user.py:658 templates/issuer/company_dashboard.html:84
+#: templates/issuer/issue_experience_credential_workflow.html:38
+#: templates/issuer/issue_identity_credential.html:37
+#: templates/issuer/request_experience_credential.html:31
+msgid "Title"
+msgstr "Titre"
+
+#: routes/web_data_user.py:434 templates/update_personal_settings.html:72
 msgid "Birth Date"
 msgstr "Date de naissance"
 
-#: routes/web_data_user.py:525 routes/web_data_user.py:725
+#: routes/web_data_user.py:435 routes/web_data_user.py:611
 #: templates/update_personal_settings.html:57
 msgid "Contact Email"
 msgstr "Email"
 
-#: routes/web_data_user.py:526 routes/web_data_user.py:726
+#: routes/web_data_user.py:436 routes/web_data_user.py:612
 #: templates/update_personal_settings.html:85
 msgid "Contact Phone"
 msgstr "Téléphone"
 
-#: routes/web_data_user.py:527 routes/web_data_user.py:727
+#: routes/web_data_user.py:437 routes/web_data_user.py:613
 #: templates/update_company_settings.html:85
 #: templates/update_personal_settings.html:99
 msgid "Postal Address"
 msgstr "Adresse postale"
 
-#: routes/web_data_user.py:528 templates/add_education.html:31
-#: templates/person_identity.html:110 templates/person_issuer_identity.html:318
+#: routes/web_data_user.py:438 templates/add_education.html:31
+#: templates/person_identity.html:117 templates/person_issuer_identity.html:318
 #: templates/update_personal_settings.html:54
 msgid "Education"
 msgstr "Formation"
 
-#: routes/web_data_user.py:558 routes/web_issuer.py:16
+#: routes/web_data_user.py:446 routes/web_issuer.py:16
 msgid "Identity pass"
 msgstr "Pass d'identité"
 
-#: routes/web_data_user.py:559 routes/web_hrid.py:21 routes/web_issuer.py:17
+#: routes/web_data_user.py:447
+msgid "Student Card"
+msgstr "Carte étudiant"
+
+#: routes/web_data_user.py:448
+msgid "Certificate of completion"
+msgstr "Certificat de fin de formation"
+
+#: routes/web_data_user.py:449 routes/web_issuer.py:17
 #: templates/person_issuer_identity.html:231
 msgid "Professional experience assessment"
 msgstr "Attestation d'expérience professionnelle"
 
-#: routes/web_data_user.py:560 routes/web_hrid.py:22 routes/web_issuer.py:18
-#: routes/web_main.py:155
+#: routes/web_data_user.py:450 routes/web_issuer.py:18
 msgid "Skill certificate"
 msgstr "Attestation de compétences"
 
-#: routes/web_data_user.py:561 routes/web_hrid.py:23 routes/web_issuer.py:19
-#: routes/web_main.py:156
+#: routes/web_data_user.py:451 routes/web_issuer.py:19
 msgid "Training certificate"
 msgstr "Attestation de formation"
 
-#: routes/web_data_user.py:562 routes/web_hrid.py:24 routes/web_issuer.py:20
+#: routes/web_data_user.py:452 routes/web_issuer.py:20
 #: templates/person_issuer_identity.html:274
 msgid "Recommendation letter"
 msgstr "Lettre de recommandation"
 
-#: routes/web_data_user.py:563 routes/web_hrid.py:25 routes/web_issuer.py:21
+#: routes/web_data_user.py:453 routes/web_issuer.py:21
 #: templates/issuer/request_work_credential.html:20
 msgid "Certificate of employment"
 msgstr "Attestation employeur"
 
-#: routes/web_data_user.py:564 routes/web_hrid.py:26 routes/web_issuer.py:22
-#: routes/web_main.py:159
+#: routes/web_data_user.py:454 routes/web_issuer.py:22
 msgid "Employee vacation time certificate"
 msgstr "Attestation de congès payés"
 
-#: routes/web_data_user.py:565 routes/web_hrid.py:27 routes/web_issuer.py:23
-#: routes/web_main.py:160
+#: routes/web_data_user.py:455 routes/web_issuer.py:23
 msgid "Certificate of participation"
 msgstr "Attestation de stage"
 
-#: routes/web_data_user.py:566 routes/web_hrid.py:28 routes/web_issuer.py:24
-#: routes/web_main.py:161
+#: routes/web_data_user.py:456 routes/web_issuer.py:24
 msgid "Transfer certificate"
 msgstr "Attestation de mutation"
 
-#: routes/web_data_user.py:567 routes/web_hrid.py:30 routes/web_issuer.py:25
-#: routes/web_main.py:163
+#: routes/web_data_user.py:457 routes/web_issuer.py:25
 msgid "Promise to hire letter"
 msgstr "Lettre de promesse d'embauche"
 
-#: routes/web_data_user.py:571
+#: routes/web_data_user.py:461
 msgid "No Credential available"
 msgstr "Aucune attestation disponible"
 
-#: routes/web_data_user.py:584 routes/web_data_user.py:749
-#: routes/web_data_user.py:771 templates/issuer/request_certificate.html:32
+#: routes/web_data_user.py:471 routes/web_data_user.py:472
+#: routes/web_issuer_explore.py:70 templates/person_issuer_identity.html:260
+#: templates/person_issuer_identity.html:303
+#: templates/person_issuer_identity.html:346
+msgid "No data available"
+msgstr "Aucune donnée"
+
+#: routes/web_data_user.py:474 routes/web_data_user.py:635
+#: routes/web_data_user.py:657 templates/issuer/request_certificate.html:32
 msgid "Credential Type"
-msgstr "Type d'attestation"
+msgstr "Type de certificat"
 
-#: routes/web_data_user.py:585
+#: routes/web_data_user.py:475
 msgid "Credential Privacy"
-msgstr "Visibilité de l'attestation"
+msgstr "Visibilité du certificat"
 
-#: routes/web_data_user.py:586
+#: routes/web_data_user.py:476
 msgid "Issuer legal name"
 msgstr "Nom légal de l'émetteur"
 
-#: routes/web_data_user.py:587
+#: routes/web_data_user.py:477
 msgid "Issuer current address"
 msgstr "Adresse de l'émetteur"
 
-#: routes/web_data_user.py:588
+#: routes/web_data_user.py:478
 msgid "Issuer DID"
 msgstr "Issuer DID"
 
-#: routes/web_data_user.py:589
+#: routes/web_data_user.py:479
 msgid "Issuance Date"
 msgstr "Date de l'émission"
 
-#: routes/web_data_user.py:604
-msgid "Display Credential"
-msgstr "Afficher l'attestation"
-
-#: routes/web_data_user.py:606
-msgid "Download to your smartphone wallet"
-msgstr "Sauvegarder l'attestation dans votre wallet"
-
-#: routes/web_data_user.py:650
+#: routes/web_data_user.py:536
 msgid "Add an Admin"
 msgstr "Ajouter un administrateur"
 
-#: routes/web_data_user.py:664
+#: routes/web_data_user.py:550
 msgid "Add an Issuer"
 msgstr "Ajouter un signataire"
 
-#: routes/web_data_user.py:678
+#: routes/web_data_user.py:564
 msgid "Add a Reviewer"
 msgstr "Ajouter un validateur"
 
-#: routes/web_data_user.py:693
+#: routes/web_data_user.py:579
 msgid "Add a Campaign"
 msgstr "Ajouter une campagne"
 
-#: routes/web_data_user.py:715
+#: routes/web_data_user.py:601
 msgid "Change Logo"
 msgstr "Modifier le logo"
 
-#: routes/web_data_user.py:716
+#: routes/web_data_user.py:602
 msgid "Change Signature"
 msgstr "Modifier la signature"
 
-#: routes/web_data_user.py:720
+#: routes/web_data_user.py:606
 msgid "Company name"
 msgstr "Dénomination entreprise"
 
-#: routes/web_data_user.py:721
+#: routes/web_data_user.py:607
 msgid "Contact name"
 msgstr "Nom du contact"
 
-#: routes/web_data_user.py:722
+#: routes/web_data_user.py:608
 msgid "website"
 msgstr "website"
 
-#: routes/web_data_user.py:723 templates/update_company_settings.html:99
+#: routes/web_data_user.py:609 templates/update_company_settings.html:99
 msgid "SIREN"
 msgstr "SIREN"
 
-#: routes/web_data_user.py:728
+#: routes/web_data_user.py:614
 msgid "Mother company"
 msgstr "Maison mère"
 
-#: routes/web_data_user.py:729 templates/update_company_settings.html:93
+#: routes/web_data_user.py:615 templates/update_company_settings.html:93
 msgid "Staff"
 msgstr "Nombre de salariés"
 
-#: routes/web_data_user.py:730
+#: routes/web_data_user.py:616
 msgid "Sales"
 msgstr "Chiffre d'Affaires"
 
-#: routes/web_data_user.py:737
+#: routes/web_data_user.py:623
 msgid "Update Company Data"
 msgstr "Modifier les données entreprise"
 
-#: routes/web_data_user.py:741
+#: routes/web_data_user.py:627
 msgid "No Credentials available"
 msgstr "Aucune attestation disponible"
 
-#: routes/web_data_user.py:748 routes/web_data_user.py:770
+#: routes/web_data_user.py:634 routes/web_data_user.py:656
 #: routes/web_issuer_explore.py:566
 msgid "Issuer Name"
 msgstr "Signataire"
 
-#: routes/web_data_user.py:752 routes/web_data_user.py:774
-msgid "Display Certificate"
-msgstr "Afficher l'attestation"
+#: routes/web_data_user.py:637 routes/web_data_user.py:659
+#: routes/web_issuer_explore.py:161 routes/web_issuer_explore.py:167
+#: routes/web_issuer_explore.py:232 routes/web_issuer_explore.py:490
+#: routes/web_issuer_explore.py:569 templates/issuer/company_dashboard.html:85
+msgid "Description"
+msgstr "Description"
 
-#: routes/web_data_user.py:865
+#: routes/web_data_user.py:638 routes/web_data_user.py:660
+msgid "Display Certificate"
+msgstr "Afficher le certificat"
+
+#: routes/web_data_user.py:751
 msgid "No DID available"
 msgstr "Identifiant indisponible"
 
-#: routes/web_data_user.py:881
+#: routes/web_data_user.py:764
 msgid "Add new DID"
 msgstr "Ajouter un nouveau DID"
 
-#: routes/web_data_user.py:899
+#: routes/web_data_user.py:782
 msgid "No Partners available"
 msgstr "Aucun partner disponible"
 
-#: routes/web_data_user.py:965 routes/web_main.py:309
+#: routes/web_data_user.py:848 routes/web_main.py:305
 msgid "Picture has been updated"
 msgstr "Photo mise à jour"
 
-#: routes/web_data_user.py:967 routes/web_main.py:311
+#: routes/web_data_user.py:850 routes/web_main.py:307
 msgid "Logo has been updated"
 msgstr "Logo mis à jour"
-
-#: routes/web_emailpass.py:47
-msgid "Secret code sent to your email."
-msgstr "Code secret envoyé par email."
-
-#: routes/web_emailpass.py:50
-msgid "Email failed."
-msgstr "Echec d'envoi d'email."
-
-#: routes/web_emailpass.py:66 routes/web_login.py:179
-#: routes/web_phonepass.py:66
-msgid "Code expired."
-msgstr "Code expiré."
-
-#: routes/web_emailpass.py:69 routes/web_login.py:142 routes/web_login.py:182
-#: routes/web_phonepass.py:69
-msgid "Too many trials (3 max)."
-msgstr "Nombre maximum d'essais atteint."
-
-#: routes/web_emailpass.py:73 routes/web_login.py:186
-#: routes/web_phonepass.py:73
-msgid "This code is incorrect, 2 trials left."
-msgstr "Ce code est incorrect, plus que 2 essais."
-
-#: routes/web_emailpass.py:75 routes/web_login.py:188
-#: routes/web_phonepass.py:75
-msgid "This code is incorrect, 1 trial left."
-msgstr "Ce code est incorrect plus que 1 seul essai."
-
-#: routes/web_emailpass.py:139
-msgid "Great ! you have now an Email Pass."
-msgstr "Bravo ! vous avez maintenant votre preuve d'email."
-
-#: routes/web_emailpass.py:141 routes/web_loyaltycard.py:136
-#: routes/web_phonepass.py:141
-msgid "Delay expired."
-msgstr "Délais expiré."
-
-#: routes/web_hrid.py:20 routes/web_main.py:153
-msgid "Identiy pass"
-msgstr "Passe identité"
-
-#: routes/web_hrid.py:29 routes/web_main.py:162
-msgid "Labour certificate"
-msgstr "Certificat de travail"
 
 #: routes/web_issuer.py:114
 msgid "This company has no active campaign."
@@ -506,18 +413,15 @@ msgstr "Rédiger un bilan de cette compétence"
 msgid "view not yet available."
 msgstr "Vue non disponible."
 
-#: routes/web_issuer.py:743 routes/web_main.py:1379 routes/web_register.py:379
-#: routes/web_register.py:410
+#: routes/web_issuer.py:743 routes/web_main.py:1337 routes/web_register.py:385
 msgid "Operation failed."
 msgstr "Echec de l'opération."
 
-#: routes/web_issuer.py:768 routes/web_register.py:386
-#: routes/web_register.py:417
+#: routes/web_issuer.py:768
 msgid "Add credential to repository failed."
 msgstr "Echec de l'ajout de l'attestation."
 
-#: routes/web_issuer.py:771 routes/web_register.py:390
-#: routes/web_register.py:421
+#: routes/web_issuer.py:771
 msgid "The credential has been added to the user repository."
 msgstr "L'attestation a été ejoutée au portfolio de l'utilisateur."
 
@@ -553,6 +457,17 @@ msgstr "Crypté "
 #: templates/issuer/company_dashboard.html:86
 msgid "Created"
 msgstr "Créé"
+
+#: routes/web_issuer_explore.py:158 routes/web_issuer_explore.py:281
+#: templates/add_activity.html:47 templates/add_education.html:47
+#: templates/add_experience.html:47
+msgid "Start Date"
+msgstr "Date de début"
+
+#: routes/web_issuer_explore.py:159 routes/web_issuer_explore.py:282
+#: templates/add_education.html:50 templates/add_experience.html:50
+msgid "End Date"
+msgstr "Date de fin"
 
 #: routes/web_issuer_explore.py:175 routes/web_issuer_explore.py:395
 msgid "Self claim"
@@ -593,521 +508,536 @@ msgstr "Date de début"
 msgid "Project Budget"
 msgstr "Budget du projet"
 
-#: routes/web_login.py:69 routes/web_login.py:81
+#: routes/web_login.py:68 routes/web_login.py:80
 msgid "Talao : Email authentication  "
-msgstr "Talao : authentification par Email "
+msgstr "Ecole 42 : authentification par Email "
 
-#: routes/web_login.py:105 routes/web_login.py:303
+#: routes/web_login.py:104 routes/web_login.py:328
 msgid "Get a Certificate of Employment"
 msgstr "Obtenir une Attestation employeur"
 
-#: routes/web_login.py:107 routes/web_login.py:305
+#: routes/web_login.py:106 routes/web_login.py:330
 msgid "Request a Professional Experience Assessment"
-msgstr "Demander une Attestation d'expérience professionnelle"
+msgstr "Demander une attestation d'expérience professionnelle"
 
-#: routes/web_login.py:109 routes/web_login.py:307
-#: templates/guest_nav_bar.html:49 templates/guest_nav_bar_2.html:52
+#: routes/web_login.py:108 routes/web_login.py:332
+#: templates/ecole42_guest_nav_bar_2.html:42 templates/guest_nav_bar.html:49
+#: templates/guest_nav_bar_2.html:52
 #: templates/login/forgot_password_init.html:43
 #: templates/login/forgot_username.html:39
-#: templates/login/login_password.html:76 templates/login/unregistered.html:25
+#: templates/login/login_password.html:63 templates/login/unregistered.html:25
 #: templates/register/register_code.html:57
 #: templates/register/register_password.html:70
 #: templates/register/register_wallet_user.html:51
 #: templates/register/registration_error.html:37
 #: templates/register/user_register.html:67
-#: templates/wallet/test/playground_nav_bar.html:44
+#: templates/wallet/test/playground_nav_bar.html:45
+#: templates/wallet/test/playground_new__nav_bar.html:45
+#: templates/wallet/test/prosoon_nav_bar.html:45
 msgid "Sign-In"
 msgstr "Se connecter"
 
-#: routes/web_login.py:126
+#: routes/web_login.py:129
 msgid "Username not found"
 msgstr "Nom d'utilisateur non trouvé"
 
-#: routes/web_login.py:133
+#: routes/web_login.py:136
 msgid "This password is incorrect, 2 trials left."
-msgstr "Mot de passe incorrect."
+msgstr "Mot de passe incorrect, plus que 2 essais."
 
-#: routes/web_login.py:138
+#: routes/web_login.py:141
 msgid "This password is incorrect, 1 trials left."
 msgstr "Mot de passe incorrect, plus que 1 essai."
 
-#: routes/web_login.py:151
+#: routes/web_login.py:145 routes/web_login.py:185
+msgid "Too many trials (3 max)."
+msgstr "Nombre maximum d'essais atteint."
+
+#: routes/web_login.py:154
 msgid "Secret code sent by "
 msgstr "Code secret envoyé par "
 
-#: routes/web_login.py:154
+#: routes/web_login.py:157
 msgid "Connexion problem."
 msgstr "Connexion impossible."
 
-#: routes/web_login.py:165
+#: routes/web_login.py:168
 msgid "Authentification expired."
 msgstr "Authentification expirée."
 
-#: routes/web_login.py:201
+#: routes/web_login.py:182
+msgid "Code expired."
+msgstr "Code expiré."
+
+#: routes/web_login.py:189
+msgid "This code is incorrect, 2 trials left."
+msgstr "Ce code est incorrect, plus que 2 essais."
+
+#: routes/web_login.py:191
+msgid "This code is incorrect, 1 trial left."
+msgstr "Ce code est incorrect plus que 1 seul essai."
+
+#: routes/web_login.py:204
 msgid "Thank you for your visit."
 msgstr "Merci pour votre visite."
 
-#: routes/web_login.py:222
+#: routes/web_login.py:225
 msgid "There is no Identity with this Email."
 msgstr "Il n'existe aucune identité pour cet email."
 
-#: routes/web_login.py:224
+#: routes/web_login.py:227
 msgid "This Email is already used by Identities : "
 msgstr "Cet email est déjà utilisé pour une identité : "
 
-#: routes/web_login.py:239 routes/web_main.py:454
+#: routes/web_login.py:242 routes/web_main.py:450
 msgid "Username not found."
 msgstr "Nom utilisateur inconnu."
 
-#: routes/web_login.py:255
+#: routes/web_login.py:258
 msgid "You are going to receive an email to renew your password."
 msgstr "Vous allez recevoir un email pour renouveller votre mot de passe."
 
-#: routes/web_login.py:276
+#: routes/web_login.py:279
 msgid "Delay expired (3 minutes maximum)."
 msgstr "Délais expiré."
 
-#: routes/web_login.py:283
+#: routes/web_login.py:286
 msgid "Incorrect email."
 msgstr "Email incorrect."
 
-#: routes/web_login.py:286
+#: routes/web_login.py:289
 msgid "Password updated."
 msgstr "Mot de passe mis à jour."
 
-#: routes/web_login.py:331
+#: routes/web_login.py:345
 msgid "Delay has expired."
 msgstr "Délais expiré."
 
-#: routes/web_login.py:388
-msgid "Your Digital Identity has not been registered yet."
+#: routes/web_login.py:385 routes/web_login.py:392
+msgid "Credential check failed."
+msgstr "Echec de la vérification."
+
+#: routes/web_login.py:400
+msgid "Your identity has not been registered yet."
 msgstr "Votre Identité Numérique n'est pas enregistrée."
-
-#: routes/web_loyaltycard.py:43 routes/web_loyaltycard.py:50
-msgid " Card"
-msgstr " Card"
-
-#: routes/web_loyaltycard.py:134
-msgid "Great ! you have now a new Loyalty Card."
-msgstr "Bravo ! vous avez maintenant votre Carte de Fidélité."
 
 #: routes/web_main.py:108
 msgid "No credential selected"
 msgstr "Aucune attestation sélectionnée."
 
+#: routes/web_main.py:153 templates/company_nav_bar.html:79
+msgid "Student card"
+msgstr "Carte étudiant"
+
 #: routes/web_main.py:154
-msgid "Experience credential"
-msgstr "Attestation d'expérience professionelle"
+msgid "Certificate of completion 42"
+msgstr "Certificat de fin de formation"
+
+#: routes/web_main.py:155
+msgid "Certificate A"
+msgstr "Certificat A"
+
+#: routes/web_main.py:156
+msgid "Certificate B"
+msgstr "Certificat B"
 
 #: routes/web_main.py:157
-msgid "Recomendation letter"
-msgstr "Lettre de recommandation"
+msgid "Badge A"
+msgstr "Badge A"
 
 #: routes/web_main.py:158
-msgid "Employer certificate"
-msgstr "Attestation employeur"
+msgid "Badge B"
+msgstr "Badge B"
 
-#: routes/web_main.py:198
+#: routes/web_main.py:194
 msgid "Credential is not a JSON-LD."
 msgstr "Attestation non disponible."
 
-#: routes/web_main.py:208
+#: routes/web_main.py:204
 msgid "Network connexion problem."
 msgstr "Problème de connexion."
 
-#: routes/web_main.py:212
+#: routes/web_main.py:208
 msgid "Unknown issuer DID."
 msgstr "Identifiant émetteur inconnu."
 
-#: routes/web_main.py:221
+#: routes/web_main.py:217
 msgid "No issuer credential has been found (No LinkedDomains service Endpoint)."
 msgstr "Aucun émetteur n'a été identifié."
 
-#: routes/web_main.py:227
+#: routes/web_main.py:223
 msgid " No issuer credential has been found."
 msgstr " Votre compte et identité ont été effaçés."
 
-#: routes/web_main.py:252 routes/web_main.py:276
+#: routes/web_main.py:248 routes/web_main.py:272
 msgid "Only \"JPEG\", \"JPG\", \"PNG\" files accepted"
 msgstr "Fichiers acceptés :  \"JPEG\", \"JPG\", \"PNG\" "
 
-#: routes/web_main.py:264
+#: routes/web_main.py:260
 msgid "Your picture has been updated"
 msgstr "Votre image de profil a été mise à jours."
 
-#: routes/web_main.py:289
+#: routes/web_main.py:285
 msgid "Fail to update signature."
 msgstr "Echec de la mise à jour de la signature."
 
-#: routes/web_main.py:291
+#: routes/web_main.py:287
 msgid "Your signature has been updated."
 msgstr "Votre signature a été mise à jour."
 
-#: routes/web_main.py:321
+#: routes/web_main.py:317
 msgid "Your Name was already in the search bar."
 msgstr "Votre nom est déjà dans la barre de recherche."
 
-#: routes/web_main.py:323
+#: routes/web_main.py:319
 msgid "Your Name has been added to the search bar."
 msgstr "Votre nom a été ajouté dans le répertoire."
 
-#: routes/web_main.py:325
+#: routes/web_main.py:321
 msgid "There has been an error, please contact support."
 msgstr "Erreur, contactez le support."
 
-#: routes/web_main.py:328
+#: routes/web_main.py:324
 msgid "Your Name has been removed from the search bar."
 msgstr "Votre nom a été effaçé du répertoire."
 
-#: routes/web_main.py:342
+#: routes/web_main.py:338
 msgid "Your phone number has been deleted."
 msgstr "Votre numéro de téléphone a été effaçé."
 
-#: routes/web_main.py:348
+#: routes/web_main.py:344
 msgid "Your phone number has been updated."
 msgstr "Votre numéro de téléphone a été mis à jour."
 
-#: routes/web_main.py:350 routes/web_register.py:122
+#: routes/web_main.py:346 routes/web_register.py:127
 msgid "Incorrect phone number."
 msgstr "Numéro de téléphone incorrect."
 
-#: routes/web_main.py:363
+#: routes/web_main.py:359
 msgid "Wrong password"
 msgstr "Mot de pass incorrect."
 
-#: routes/web_main.py:366
+#: routes/web_main.py:362
 msgid "Password updated"
 msgstr "Mot de passe mis à jour."
 
-#: routes/web_main.py:388
+#: routes/web_main.py:384
 msgid "The bug has been reported ! Thank you for your help ! "
 msgstr "Le problème a été remonté. Merci pour votre aide."
 
-#: routes/web_main.py:451
+#: routes/web_main.py:447
 msgid "Here you are !"
 msgstr "Vous y êtes !"
 
-#: routes/web_main.py:467
+#: routes/web_main.py:463
 msgid "We do not have your Private Key to issue a Certificate."
 msgstr "Nous n'avons pas votre clé privée pour signer une attestation."
 
-#: routes/web_main.py:471
-msgid "Talent is required to make a formal request."
-msgstr "L'utilisateur doit faire une demande d'attestation."
-
-#: routes/web_main.py:507
+#: routes/web_main.py:491
 msgid "This certificate is not implemented yet !"
 msgstr "Ce modèle d'attestation n'est pas encore disponible."
 
-#: routes/web_main.py:582 routes/web_main.py:641
-msgid "Credential is beeing issued."
-msgstr "L'attestation est en cours de publication."
+#: routes/web_main.py:546
+msgid "Student card is beeing issued."
+msgstr "La carte étudiant est en cours de publication."
 
-#: routes/web_main.py:702
+#: routes/web_main.py:588
+msgid "Certificate of completion is beeing issued."
+msgstr "Le certificat de fin de formation est en cours de publication."
+
+#: routes/web_main.py:648
 msgid "Personal has been updated"
 msgstr "Les données personnelles ont été mises à jour."
 
-#: routes/web_main.py:746
+#: routes/web_main.py:692
 msgid "Company not found in SIREN database."
 msgstr "L'entreprise n'existe pas dans la base."
 
-#: routes/web_main.py:801
+#: routes/web_main.py:747
 msgid "Company settings have been updated"
 msgstr "Les données de l'entreprise ont été mises à jour."
 
-#: routes/web_main.py:826
+#: routes/web_main.py:772
 msgid "Transaction failed"
 msgstr "Echec de la transaction."
 
-#: routes/web_main.py:838
+#: routes/web_main.py:784
 msgid "File "
 msgstr "Fichier"
 
-#: routes/web_main.py:838
+#: routes/web_main.py:784
 msgid " has been uploaded."
 msgstr " a été sauvegardé."
 
-#: routes/web_main.py:868 routes/web_main.py:896
+#: routes/web_main.py:814 routes/web_main.py:842
 msgid "New experience added"
 msgstr "Nouvelle expérience professionnelle ajoutée."
 
-#: routes/web_main.py:915
+#: routes/web_main.py:861
 msgid "The experience has been removed"
 msgstr "L'expérience a été effacée"
 
-#: routes/web_main.py:939
+#: routes/web_main.py:885
 msgid " has been created as company."
 msgstr " a été créé en qualité d'entreprise."
 
-#: routes/web_main.py:941
+#: routes/web_main.py:887
 msgid "Company Creation failed."
 msgstr "Echec de la création du compte entreprise."
 
-#: routes/web_main.py:962
+#: routes/web_main.py:920
 msgid " has been created as a new user of the company."
 msgstr " a été créé en qualité de nouvel utilisateur de l'entreprise."
 
-#: routes/web_main.py:964
+#: routes/web_main.py:922
 msgid "Identity creation failed"
 msgstr "Echec de la création d'Identité."
 
-#: routes/web_main.py:980 routes/web_main.py:1006 routes/web_main.py:1050
-#: routes/web_main.py:1572 routes/web_register.py:179
-#: routes/web_register.py:334
+#: routes/web_main.py:938 routes/web_main.py:964 routes/web_main.py:1008
+#: routes/web_main.py:1530 routes/web_register.py:184
+#: routes/web_register.py:343
 msgid "Transaction failed."
 msgstr "Echec de la transaction."
 
-#: routes/web_main.py:983
+#: routes/web_main.py:941
 msgid "The certificate has been removed from your repository."
-msgstr "L'attestation a été effaçée de votre portfolio."
+msgstr "L'attestation a été effaçée de votre compte."
 
-#: routes/web_main.py:1054
+#: routes/web_main.py:1012
 msgid "The file has been deleted."
 msgstr "Le fichier a été effaçé."
 
-#: routes/web_main.py:1084
+#: routes/web_main.py:1042
 msgid "New Education added."
 msgstr "Nouvelle formation ajoutée."
 
-#: routes/web_main.py:1103
+#: routes/web_main.py:1061
 msgid "Education has been removed"
 msgstr "Formation effaçée."
 
-#: routes/web_main.py:1117
+#: routes/web_main.py:1075
 msgid "This email is already used by Identity(ies) : "
 msgstr "Cet email est déjà utilisé par les identitées : "
 
-#: routes/web_main.py:1124
+#: routes/web_main.py:1082
 msgid "Your invit has been sent."
 msgstr "Votre invitation a été envoyée."
 
-#: routes/web_main.py:1126
+#: routes/web_main.py:1084
 msgid "Your invit has not been sent."
 msgstr "Votre invitation n'a pas été envoyée."
 
-#: routes/web_main.py:1139
+#: routes/web_main.py:1097
 msgid "You have received a memo from "
 msgstr "Vous avez reçu un message de "
 
-#: routes/web_main.py:1144
+#: routes/web_main.py:1102
 msgid "Your memo has been sent to "
 msgstr "Votre message a été envoyé a "
 
-#: routes/web_main.py:1160
+#: routes/web_main.py:1118
 msgid "Request Partnership to "
 msgstr "Demande de partenariat à "
 
-#: routes/web_main.py:1160
+#: routes/web_main.py:1118
 msgid " is not available (RSA key not found)"
 msgstr " n'est pas disponible."
 
-#: routes/web_main.py:1191
+#: routes/web_main.py:1149
 msgid "transaction for add issuer failed."
-msgstr ""
+msgstr "echec de la transaction"
 
-#: routes/web_main.py:1195
+#: routes/web_main.py:1153
 msgid "You have send a Request for Partnership to "
 msgstr ""
 
-#: routes/web_main.py:1201
+#: routes/web_main.py:1159
 msgid "Request to "
 msgstr "Demandez à "
 
-#: routes/web_main.py:1201
+#: routes/web_main.py:1159
 msgid " failed"
 msgstr " echec"
 
-#: routes/web_main.py:1216
+#: routes/web_main.py:1174
 msgid "Partnership removal has failed."
 msgstr ""
 
-#: routes/web_main.py:1220 routes/web_main.py:1270
+#: routes/web_main.py:1178 routes/web_main.py:1228
 msgid "The partnership with "
 msgstr ""
 
-#: routes/web_main.py:1220
+#: routes/web_main.py:1178
 msgid "  has been removed"
 msgstr " a été effacé"
 
-#: routes/web_main.py:1237
+#: routes/web_main.py:1195
 msgid "Partnership rejection has failed."
 msgstr ""
 
-#: routes/web_main.py:1242
+#: routes/web_main.py:1200
 msgid "The Partnership with "
 msgstr "Le partenariat avec "
 
-#: routes/web_main.py:1242
+#: routes/web_main.py:1200
 msgid "  has been rejected."
 msgstr " a été rejeté."
 
-#: routes/web_main.py:1263
+#: routes/web_main.py:1221
 msgid "Request a Partnership to "
 msgstr ""
 
-#: routes/web_main.py:1263
+#: routes/web_main.py:1221
 msgid " is impossible (RSA key not found)"
 msgstr " est impossible."
 
-#: routes/web_main.py:1268
+#: routes/web_main.py:1226
 msgid "Partnership authorization failed."
 msgstr ""
 
-#: routes/web_main.py:1270
+#: routes/web_main.py:1228
 msgid "  has been authorized."
 msgstr " a été authorisé."
 
-#: routes/web_main.py:1360
+#: routes/web_main.py:1318
 msgid "Username already used."
 msgstr "Nom utilisateur déjà existant."
 
-#: routes/web_main.py:1364
+#: routes/web_main.py:1322
 msgid "Alias added for "
 msgstr "Alias ajouté pour "
 
-#: routes/web_main.py:1376 routes/web_main.py:1383
+#: routes/web_main.py:1334 routes/web_main.py:1341
 msgid " has been removed"
 msgstr " a été effaçé"
 
-#: routes/web_main.py:1385
+#: routes/web_main.py:1343
 msgid "Operation failed"
 msgstr "Echec de la transaction"
 
-#: routes/web_main.py:1402
+#: routes/web_main.py:1360
 msgid "Wrong Private Key."
 msgstr "Clé privée incorrecte."
 
-#: routes/web_main.py:1407
+#: routes/web_main.py:1365
 msgid "Private Key has been imported."
 msgstr "La cé privée a été importée."
 
-#: routes/web_main.py:1419
+#: routes/web_main.py:1377
 msgid "No file."
 msgstr "Aucun fichier."
 
-#: routes/web_main.py:1430
+#: routes/web_main.py:1388
 msgid "RSA key is not found."
 msgstr "Clé RSA indisponible."
 
-#: routes/web_main.py:1437
+#: routes/web_main.py:1395
 msgid "RSA Key has been uploaded."
 msgstr "La clé RSA a été sauvegardée."
 
-#: routes/web_main.py:1439
+#: routes/web_main.py:1397
 msgid "RSA key default."
-msgstr "Défault de clé RSA."
+msgstr "Absence de clé RSA."
 
-#: routes/web_main.py:1472
+#: routes/web_main.py:1430
 msgid " Thank you, we will check your documents soon."
 msgstr " Merci nous allons étudier vos documents rapidements."
 
-#: routes/web_main.py:1483
+#: routes/web_main.py:1441
 msgid "You cannot be the Referent of yourself."
 msgstr "Vous ne pouvez pas être votre propre référent."
 
-#: routes/web_main.py:1490
+#: routes/web_main.py:1448
 msgid "transaction failed"
 msgstr "Echec de transaction."
 
-#: routes/web_main.py:1502
+#: routes/web_main.py:1460
 msgid " has been added as a Referent. An email has been sent too."
 msgstr " a été ajouté en qualité de référent. Un email lui a été envoyé."
 
-#: routes/web_main.py:1527 routes/web_main.py:1544
+#: routes/web_main.py:1485 routes/web_main.py:1502
 msgid "transaction failed."
 msgstr "echec de transaction."
 
-#: routes/web_main.py:1529
+#: routes/web_main.py:1487
 msgid "Key added."
 msgstr "Clé ajoutée."
 
-#: routes/web_main.py:1547
+#: routes/web_main.py:1505
 msgid "The Issuer "
 msgstr "Le signataire "
 
-#: routes/web_main.py:1547
+#: routes/web_main.py:1505
 msgid "  has been removed."
 msgstr " a été effacé."
 
-#: routes/web_main.py:1559
+#: routes/web_main.py:1517
 msgid "Cannot delete portrfolio, no token locked."
 msgstr "Impossible d'effacer votre protfolio."
 
-#: routes/web_main.py:1577
+#: routes/web_main.py:1535
 msgid "Wrong password."
 msgstr "Mot de passe incorrect."
 
-#: routes/web_main.py:1582
+#: routes/web_main.py:1540
 msgid "Your portfolio has been deleted."
 msgstr "Votre portfolio a été effaçé."
 
-#: routes/web_main.py:1632
+#: routes/web_main.py:1590
 msgid "Certificate X.509 not available."
 msgstr "Certificat non disponible."
 
-#: routes/web_main.py:1646
+#: routes/web_main.py:1604
 msgid "Certificate PKCS12 not available."
 msgstr "Certificat non disponible."
 
-#: routes/web_phonepass.py:47
-msgid "Secret code sent to your phone."
-msgstr "Code secret envoyé par sms."
-
-#: routes/web_phonepass.py:50
-msgid "phone failed."
-msgstr "Echec de l'opération."
-
-#: routes/web_phonepass.py:139
-msgid "Great ! you have now a Phone Pass."
-msgstr "Bravo ! vous avez maintenant votre Passe Téléphone."
-
-#: routes/web_register.py:99
+#: routes/web_register.py:104
 msgid "Company registration failed"
 msgstr "Echec de la création de compte"
 
-#: routes/web_register.py:119 routes/web_register.py:301
+#: routes/web_register.py:124 routes/web_register.py:310
 msgid "Accept the service conditions to move next step."
 msgstr ""
 "Acceptez les conditions d'utilisation (CGU) pour passer à l'étape "
 "suivante."
 
-#: routes/web_register.py:141 routes/web_register.py:164
+#: routes/web_register.py:146 routes/web_register.py:169
 msgid "Session expired"
 msgstr "Session terminée."
 
-#: routes/web_register.py:156
+#: routes/web_register.py:161
 msgid "SMS failed."
 msgstr "Echec d'envoi SMS."
 
-#: routes/web_register.py:187
+#: routes/web_register.py:192
 msgid "Code is incorrect. Too many trials."
 msgstr "Code incorrect. Maximum d'essais atteint."
 
-#: routes/web_register.py:188
+#: routes/web_register.py:193
 msgid "Registration failed"
 msgstr "Echec de la création de compte."
 
-#: routes/web_register.py:192
+#: routes/web_register.py:197
 msgid "Code expired"
 msgstr "Code expiré."
 
-#: routes/web_register.py:196
+#: routes/web_register.py:201
 msgid "Code is incorrect, 2 trials left."
 msgstr "Code incorrrect, plus que 2 essais."
 
-#: routes/web_register.py:198
+#: routes/web_register.py:203
 msgid "Code is incorrect, last trial."
 msgstr "Code incorrect, dernier essai."
 
-#: routes/web_register.py:352
+#: routes/web_register.py:358
 msgid "This identity is already registered."
 msgstr "Cette Identité dispose déjà d'un portfolio."
 
-#: routes/web_register.py:354
+#: routes/web_register.py:360
 msgid "This credential was not signed correctly."
 msgstr "Cette attestation n'a pas été signée correctement."
 
-#: routes/web_register.py:356
+#: routes/web_register.py:362
 msgid "This credential is not accepted."
 msgstr "Cette attestation n'est pas acceptée."
 
@@ -1122,6 +1052,14 @@ msgstr "Votre liste de compétences a été mise à jour."
 #: routes/web_skills.py:106
 msgid "Your competencies have been updated"
 msgstr "Vos compétences ont été mises à jour."
+
+#: routes/web_wallet_download.py:36
+msgid "This credential is not available."
+msgstr "Cette attestation n'est pas disponible."
+
+#: routes/web_wallet_download.py:47
+msgid "No credential available."
+msgstr "Aucune attestation disponible."
 
 #: templates/account.html:46
 msgid "Account settings"
@@ -1139,7 +1077,7 @@ msgstr "Logo"
 msgid "Signature"
 msgstr "Signature"
 
-#: templates/account.html:78 templates/login/login_password.html:83
+#: templates/account.html:78 templates/login/login_password.html:70
 msgid "Password"
 msgstr "Mot de passe"
 
@@ -1147,48 +1085,45 @@ msgstr "Mot de passe"
 msgid "Phone number"
 msgstr "Numéro de téléphone"
 
-#: templates/account.html:107
+#: templates/account.html:109
 msgid "Name directory"
 msgstr "Paramètre du répertoire"
 
-#: templates/account.html:112
+#: templates/account.html:114
 msgid "The name directory is used to provide suggestion in the search bar. "
 msgstr "Le répertoire permet de vous identifier avec la barre de recherche."
 
-#: templates/account.html:112
+#: templates/account.html:114
 msgid "It links your username with your firstname and lastname. "
 msgstr "Cela fait le lien entre votre nom utilisateur et votre nom."
 
-#: templates/account.html:115
+#: templates/account.html:117
 msgid "I would like to have my name in the Name Directory"
 msgstr "Je souhaite avoir mon nom dans le répertoire"
 
-#: templates/account.html:116
+#: templates/account.html:118
 #: templates/issuer/issue_experience_credential_workflow.html:145
 #: templates/issuer/issue_identity_credential.html:85
 #: templates/issuer/issue_skill_credential.html:60
 #: templates/issuer/issue_work_credential.html:86
 #: templates/login/update_password_external.html:49
-#: templates/person_identity.html:53 templates/update_company_settings.html:105
+#: templates/person_identity.html:60 templates/update_company_settings.html:105
 #: templates/update_password.html:49
 #: templates/update_personal_settings.html:113
 msgid "Update"
 msgstr "Mettre à jour"
 
-#: templates/account.html:128 templates/add_activity.html:83
-#: templates/add_credential_supported.html:81 templates/add_did_qr.html:31
+#: templates/account.html:130 templates/add_activity.html:83
+#: templates/add_credential_supported.html:87 templates/add_did_qr.html:31
 #: templates/add_did_qr.html:48 templates/add_education.html:85
-#: templates/add_experience.html:85 templates/advanced.html:134
+#: templates/add_experience.html:85 templates/advanced.html:121
 #: templates/certificate/ccicertificate_vc.html:119
 #: templates/certificate/ccicertificate_vc_v2.html:87
 #: templates/certificate/identitypass_vc.html:29
 #: templates/certificate/professionalexperienceassessment_vc.html:93
 #: templates/certificate/verify_certificate.html:40
-#: templates/credible/credential_qr.html:24 templates/data_check.html:44
-#: templates/delete_identity.html:62
-#: templates/emailpass/emailpass_authentication.html:43
-#: templates/emailpass/emailpass_end.html:39
-#: templates/emailpass/emailpass_qrcode.html:20
+#: templates/data_check.html:44 templates/delete_identity.html:62
+#: templates/download/credential_qr.html:24
 #: templates/issuer/add_campaign.html:98 templates/issuer/campaign_code.html:46
 #: templates/issuer/issue_experience_credential_workflow.html:171
 #: templates/issuer/issue_identity_credential.html:111
@@ -1199,11 +1134,7 @@ msgstr "Mettre à jour"
 #: templates/issuer/request_skill_credential.html:57
 #: templates/issuer/request_work_credential.html:56
 #: templates/login/login_qr.html:32 templates/login/login_qr.html:54
-#: templates/login/logout.html:59 templates/loyaltycard/loyaltycard_end.html:27
-#: templates/loyaltycard/loyaltycard_qrcode.html:20
-#: templates/phonepass/phonepass_authentication.html:43
-#: templates/phonepass/phonepass_end.html:39
-#: templates/phonepass/phonepass_qrcode.html:20 templates/picture.html:80
+#: templates/login/logout.html:59 templates/picture.html:80
 #: templates/register/register_code.html:53
 #: templates/register/register_password.html:62
 #: templates/register/registration_error.html:35 templates/signature.html:65
@@ -1216,6 +1147,11 @@ msgstr "Retour"
 #: templates/add_activity.html:31
 msgid "Current activity"
 msgstr "Activité actuelle"
+
+#: templates/add_activity.html:39 templates/add_experience.html:39
+#: templates/directory/directory.html:107
+msgid "Company"
+msgstr "Entreprise"
 
 #: templates/add_activity.html:42 templates/add_experience.html:42
 msgid "Position"
@@ -1253,7 +1189,7 @@ msgstr "Ajouter"
 msgid "Select credentials supported."
 msgstr "Choisissez les attestations."
 
-#: templates/add_credential_supported.html:78
+#: templates/add_credential_supported.html:84
 #: templates/issuer/request_work_credential.html:53
 #: templates/login/logout.html:56 templates/remove_certificate.html:31
 msgid "Confirm"
@@ -1266,6 +1202,10 @@ msgid ""
 msgstr ""
 "<br> Scannez le QR code avec votre wallet smartphone. <br>Vous pouvez "
 "présenter n'importe quelle attestation signée avec votre Identité."
+
+#: templates/add_education.html:39
+msgid "Organization"
+msgstr "Organisation"
 
 #: templates/add_education.html:42
 msgid "Title or Degree"
@@ -1297,41 +1237,36 @@ msgid "Advanced parameters"
 msgstr "Paramètres avançés"
 
 #: templates/advanced.html:53
-msgid "Partner List"
-msgstr "Liste de vos partenaires"
-
-#: templates/advanced.html:65
 msgid "API Credentials"
 msgstr "APIS"
 
-#: templates/advanced.html:77
+#: templates/advanced.html:65
 msgid "DID document"
 msgstr "DID Document"
 
-#: templates/advanced.html:88
+#: templates/advanced.html:76
 msgid "Identity Key"
 msgstr "Clé privée"
 
-#: templates/advanced.html:92
+#: templates/advanced.html:80
 msgid "Copy your private key to clipboard"
 msgstr "Copier/coller votre clé privée"
 
-#: templates/advanced.html:100
+#: templates/advanced.html:88
 msgid "Import Identity"
 msgstr "Importer une Identité"
 
-#: templates/advanced.html:117
+#: templates/advanced.html:105
 msgid "Portfolio data"
 msgstr "Données du Portfolio"
 
 #: templates/company_identity.html:57
-msgid "Company Details"
-msgstr "Données entreprise"
+msgid "Campus Details"
+msgstr "Données campus"
 
-#: templates/company_identity.html:83 templates/company_nav_bar.html:94
-#: templates/company_nav_bar.html:112 templates/manager_nav_bar.html:74
-msgid "Credentials"
-msgstr "Attestations"
+#: templates/company_identity.html:83
+msgid "Campus credentials"
+msgstr "Certificats"
 
 #: templates/company_identity.html:123
 msgid "Administrators"
@@ -1346,10 +1281,10 @@ msgid "Reviewers"
 msgstr "Validateurs"
 
 #: templates/company_identity.html:156
-msgid "Campaigns"
-msgstr "Campagnes"
+msgid "Certification campaigns"
+msgstr "Campagne de certification"
 
-#: templates/company_identity.html:167 templates/person_identity.html:64
+#: templates/company_identity.html:167 templates/person_identity.html:71
 msgid "File Store"
 msgstr "Fichiers"
 
@@ -1390,81 +1325,97 @@ msgid "References"
 msgstr "Références"
 
 #: templates/company_nav_bar.html:15 templates/manager_nav_bar.html:14
-#: templates/user_nav_bar.html:16
+#: templates/user_nav_bar.html:15
 msgid "Settings"
 msgstr "Paramètres"
 
-#: templates/company_nav_bar.html:17 templates/company_nav_bar.html:129
+#: templates/company_nav_bar.html:17 templates/company_nav_bar.html:133
 #: templates/manager_nav_bar.html:16 templates/manager_nav_bar.html:92
 msgid "Invit by email"
 msgstr "Inviter par email"
 
-#: templates/company_nav_bar.html:20 templates/company_nav_bar.html:111
+#: templates/company_nav_bar.html:20 templates/company_nav_bar.html:116
 #: templates/manager_nav_bar.html:19 templates/manager_nav_bar.html:88
-#: templates/update_skills.html:105 templates/user_nav_bar.html:21
-#: templates/user_nav_bar.html:94
+#: templates/update_skills.html:105 templates/user_nav_bar.html:20
+#: templates/user_nav_bar.html:101
 msgid "Advanced"
 msgstr "Paramètres avançés"
 
-#: templates/company_nav_bar.html:21 templates/company_nav_bar.html:107
-#: templates/manager_nav_bar.html:20 templates/user_nav_bar.html:90
+#: templates/company_nav_bar.html:21 templates/manager_nav_bar.html:20
+#: templates/user_nav_bar.html:97
 msgid "Documentation"
 msgstr "Documentation"
 
-#: templates/company_nav_bar.html:23 templates/user_nav_bar.html:25
+#: templates/company_nav_bar.html:23 templates/user_nav_bar.html:24
 msgid "Delete Identity"
 msgstr "Effacer votre identité"
 
-#: templates/company_nav_bar.html:26 templates/company_nav_bar.html:122
+#: templates/company_nav_bar.html:26 templates/company_nav_bar.html:118
 msgid "Config API Server"
 msgstr "Configuraion API server"
 
-#: templates/company_nav_bar.html:34 templates/company_nav_bar.html:132
+#: templates/company_nav_bar.html:34 templates/company_nav_bar.html:136
 #: templates/login/logout.html:49 templates/manager_nav_bar.html:22
-#: templates/manager_nav_bar.html:94 templates/user_nav_bar.html:27
-#: templates/user_nav_bar.html:104
+#: templates/manager_nav_bar.html:94 templates/user_nav_bar.html:26
+#: templates/user_nav_bar.html:117
 msgid "Logout"
 msgstr "Déconnexion"
 
-#: templates/company_nav_bar.html:63 templates/manager_nav_bar.html:51
-#: templates/user_nav_bar.html:55
+#: templates/company_nav_bar.html:64 templates/manager_nav_bar.html:51
+#: templates/user_nav_bar.html:54
 msgid "This search bar only works with usernames."
 msgstr "Recherche par nom d'utilisateur."
 
-#: templates/company_nav_bar.html:88
+#: templates/company_nav_bar.html:78
+msgid "Certificate"
+msgstr "Certificat"
+
+#: templates/company_nav_bar.html:92
 msgid "Key"
 msgstr "Key"
 
-#: templates/company_nav_bar.html:92 templates/user_nav_bar.html:79
+#: templates/company_nav_bar.html:99 templates/user_nav_bar.html:83
 msgid "Identity"
 msgstr "Identité"
 
-#: templates/company_nav_bar.html:93
+#: templates/company_nav_bar.html:100
 msgid "Board"
 msgstr "Portfolio"
 
-#: templates/company_nav_bar.html:110 templates/user_nav_bar.html:92
+#: templates/company_nav_bar.html:101 templates/manager_nav_bar.html:74
+msgid "Credentials"
+msgstr "Attestations"
+
+#: templates/company_nav_bar.html:115 templates/user_nav_bar.html:99
 msgid "Account"
 msgstr "Compte"
 
-#: templates/company_nav_bar.html:116
+#: templates/company_nav_bar.html:117
+msgid "Certificates-Badges"
+msgstr "Certificats et badges"
+
+#: templates/company_nav_bar.html:122 templates/user_nav_bar.html:102
 msgid "Select Identity"
 msgstr "Choisir une identité"
 
-#: templates/company_nav_bar.html:117
+#: templates/company_nav_bar.html:123
 msgid "Delete Repository"
 msgstr "Effacer le portfolio"
 
-#: templates/company_nav_bar.html:121
-msgid "Create employee"
-msgstr "Créer un compte salarié"
+#: templates/company_nav_bar.html:126
+msgid "Create Campus"
+msgstr "Créer un campus"
 
-#: templates/company_nav_bar.html:123
-msgid "Create Company"
-msgstr "Créer un compte entreprise"
+#: templates/company_nav_bar.html:127
+msgid "Create Promotion"
+msgstr "Créer une promotion"
 
-#: templates/company_nav_bar.html:127 templates/manager_nav_bar.html:91
-#: templates/user_nav_bar.html:99
+#: templates/company_nav_bar.html:128
+msgid "Create a student account"
+msgstr "Créer un compte étudiant"
+
+#: templates/company_nav_bar.html:131 templates/manager_nav_bar.html:91
+#: templates/user_nav_bar.html:107
 msgid "Verifier"
 msgstr "Vérifier"
 
@@ -1501,18 +1452,28 @@ msgstr "Entrez votre mot de passe"
 msgid "Delete"
 msgstr "Effacer"
 
+#: templates/ecole42_guest_nav_bar_2.html:11
+msgid "Alumni 42"
+msgstr "Alumni 42"
+
+#: templates/ecole42_guest_nav_bar_2.html:41 templates/guest_nav_bar.html:31
+#: templates/guest_nav_bar_2.html:31 templates/guest_nav_bar_2.html:51
+#: templates/login/unregistered.html:28
+#: templates/wallet/test/playground_nav_bar.html:46
+#: templates/wallet/test/playground_new__nav_bar.html:46
+#: templates/wallet/test/prosoon_nav_bar.html:46
+msgid "Register"
+msgstr "Créer un portfolio"
+
 #: templates/guest_nav_bar.html:10
 msgid "Professional Digital IDentity"
 msgstr "Identité Numérique Professionnelle"
 
-#: templates/guest_nav_bar.html:31 templates/guest_nav_bar_2.html:31
-#: templates/guest_nav_bar_2.html:51 templates/login/unregistered.html:28
-msgid "Register"
-msgstr "Créer un portfolio"
-
 #: templates/guest_nav_bar.html:40 templates/guest_nav_bar_2.html:40
 #: templates/user_footer.html:9
-#: templates/wallet/test/playground_nav_bar.html:36
+#: templates/wallet/test/playground_nav_bar.html:39
+#: templates/wallet/test/playground_new__nav_bar.html:37
+#: templates/wallet/test/prosoon_nav_bar.html:37
 msgid "What is Talao ?"
 msgstr "Que propose Talao ?"
 
@@ -1521,31 +1482,47 @@ msgstr "Que propose Talao ?"
 msgid "Quick start"
 msgstr "Démarrage rapide"
 
-#: templates/emailpass/emailpass.html:36 templates/guest_nav_bar.html:43
-#: templates/guest_nav_bar_2.html:43
-#: templates/register/register_wallet_qrcode.html:43
+#: templates/guest_nav_bar.html:43 templates/guest_nav_bar_2.html:43
+#: templates/register/register_wallet_qrcode.html:53
 msgid "Get an Email Pass"
 msgstr "Obtenir une preuve d'email"
 
 #: templates/guest_nav_bar.html:44 templates/guest_nav_bar_2.html:44
-#: templates/phonepass/phonepass.html:36
 msgid "Get a Phone Pass"
 msgstr "Obtenir une preuve de téléphone"
 
 #: templates/guest_nav_bar.html:46 templates/guest_nav_bar_2.html:48
-#: templates/loyaltycard/loyaltycard.html:60
-#: templates/phonepass/phonepass.html:44
 msgid "Directory"
 msgstr "Répertoire"
 
 #: templates/guest_nav_bar_2.html:10
-msgid "Manage your Self Sovereign Identity"
-msgstr ""
+msgid "Manage your credential repository"
+msgstr "Gérer vos certificats"
 
 #: templates/guest_nav_bar_2.html:45
 #: templates/wallet/test/simulator_nav_bar.html:42
 msgid "Wallet playground"
 msgstr "Wallet playground"
+
+#: templates/issue_completion.html:20
+msgid "Issue a certificate of completion"
+msgstr "Emettre un certificat de fin de formation"
+
+#: templates/issue_completion.html:31
+msgid "Student name"
+msgstr "Carte étudiant"
+
+#: templates/issue_completion.html:39
+msgid "or enter a CSV file name"
+msgstr "ou entrez un nom de fichier CSV"
+
+#: templates/issue_completion.html:46
+msgid "Issue"
+msgstr "Emettre"
+
+#: templates/issue_completion.html:50 templates/remove_certificate.html:35
+msgid "Cancel"
+msgstr "Annuler"
 
 #: templates/manager_nav_bar.html:73
 msgid "Home"
@@ -1555,49 +1532,49 @@ msgstr "Accueil"
 msgid "My account"
 msgstr "Mon compte"
 
-#: templates/person_identity.html:41
+#: templates/person_identity.html:46
 msgid "My Resume"
 msgstr "Mon CV"
 
-#: templates/person_identity.html:46
+#: templates/person_identity.html:53
 msgid "Personal Details"
 msgstr "Données personnelles"
 
-#: templates/person_identity.html:71
+#: templates/person_identity.html:78
 msgid "Store file"
 msgstr "Sauvegarder un fichier"
 
-#: templates/person_identity.html:80
+#: templates/person_identity.html:87
 msgid "Experience and current activities"
 msgstr "Expériences et activités"
 
-#: templates/person_identity.html:90
+#: templates/person_identity.html:97
 msgid "Add Experience"
 msgstr "Ajouter une expérience"
 
-#: templates/person_identity.html:95
+#: templates/person_identity.html:102
 msgid "Add Current"
 msgstr "Ajouter une activité"
 
-#: templates/person_identity.html:118
+#: templates/person_identity.html:125
 msgid "Add Education"
 msgstr "Ajouter une formation"
 
 #: templates/issuer/issue_experience_credential_workflow.html:51
-#: templates/person_identity.html:128 templates/update_skills.html:47
+#: templates/person_identity.html:135 templates/update_skills.html:47
 #: templates/update_skills.html:93
 msgid "Skills"
 msgstr "Compétences"
 
-#: templates/person_identity.html:135
+#: templates/person_identity.html:142
 msgid "Update Skills"
 msgstr "Ajouter une compétence"
 
-#: templates/person_identity.html:148
+#: templates/person_identity.html:155
 msgid "Credential(s)"
 msgstr "Attestation(s)"
 
-#: templates/person_identity.html:166
+#: templates/person_identity.html:174
 msgid "QRCode to link your portfolio"
 msgstr "QRCode pour accéder à votre portfolio"
 
@@ -1645,10 +1622,6 @@ msgstr "Sauvegarder"
 #: templates/remove_certificate.html:25
 msgid "Remove a Credential"
 msgstr "Effacer une attestation"
-
-#: templates/remove_certificate.html:35
-msgid "Cancel"
-msgstr "Annuler"
 
 #: templates/update_company_settings.html:36
 msgid "Company Settings"
@@ -1746,6 +1719,10 @@ msgstr "Conseil"
 msgid "Development"
 msgstr "Développement"
 
+#: templates/user_footer.html:28
+msgid "Association"
+msgstr "Association"
+
 #: templates/directory/directory.html:108 templates/user_footer.html:29
 msgid "Privacy Policy"
 msgstr "Protection de la vie privée"
@@ -1754,21 +1731,25 @@ msgstr "Protection de la vie privée"
 msgid "Terms & Conditions"
 msgstr "CGU"
 
-#: templates/user_nav_bar.html:18 templates/user_nav_bar.html:101
+#: templates/user_nav_bar.html:17 templates/user_nav_bar.html:110
 msgid "Invite by email"
 msgstr "Inviter par email"
 
-#: templates/user_nav_bar.html:80
+#: templates/user_nav_bar.html:84
 msgid "Portfolio"
 msgstr "Portfolio"
 
-#: templates/user_nav_bar.html:95
+#: templates/user_nav_bar.html:103
 msgid "Delete portfolio"
 msgstr "Effacer le portfolio"
 
-#: templates/user_nav_bar.html:98
+#: templates/user_nav_bar.html:106
 msgid "Presentation"
 msgstr "Présentation"
+
+#: templates/issuer/company_dashboard.html:73 templates/user_nav_bar.html:115
+msgid "Refresh"
+msgstr "Rafraichir"
 
 #: templates/certificate/identitypass_vc.html:33
 #: templates/certificate/professionalexperienceassessment_vc.html:97
@@ -1796,14 +1777,6 @@ msgstr "Emis par"
 msgid "Signed by"
 msgstr "Signé par"
 
-#: templates/credible/credential_qr.html:18
-#: templates/emailpass/emailpass_qrcode.html:14
-#: templates/loyaltycard/loyaltycard_qrcode.html:14
-#: templates/phonepass/phonepass_qrcode.html:14
-#: templates/wallet/test/revoked_qrcode.html:15
-msgid "Scan the QRCode bellow with your Credible wallet"
-msgstr "Scannez le QR code avec votre wallet smartphone"
-
 #: templates/directory/directory.html:46
 msgid "What is Talao"
 msgstr "Que propose Talao"
@@ -1828,43 +1801,9 @@ msgstr "Preuve d'email"
 msgid "Phone Pass"
 msgstr "Preuve de téléphone"
 
-#: templates/emailpass/emailpass.html:38
-msgid ""
-"Verify your email to get one-click access to your services with your "
-"Talao smartphone wallet."
-msgstr "Validez votre email pour avoir un accès en un clic à vos services."
-
-#: templates/emailpass/emailpass.html:41
-msgid "Enter your email"
-msgstr "Saisissez votre email"
-
-#: templates/emailpass/emailpass.html:42
-#: templates/emailpass/emailpass_authentication.html:41
-#: templates/issuer/campaign_code.html:43
-#: templates/issuer/request_certificate.html:40
-#: templates/login/login_password.html:87 templates/phonepass/phonepass.html:42
-#: templates/phonepass/phonepass_authentication.html:41
-#: templates/register/register_code.html:50
-#: templates/register/register_password.html:59
-#: templates/register/register_wallet_user.html:49
-#: templates/register/user_register.html:63
-msgid "Next"
-msgstr "Suivant"
-
-#: templates/emailpass/emailpass_authentication.html:37
-#: templates/phonepass/phonepass_authentication.html:37
-msgid "Enter your code"
-msgstr "Saisissez votre code"
-
-#: templates/emailpass/emailpass_end.html:40
-#: templates/loyaltycard/loyaltycard_end.html:28
-#: templates/phonepass/phonepass_end.html:40
-msgid "Sign-In to Talao"
-msgstr "Se connecter à Talao"
-
-#: templates/hrid/hrid_company_register_fr.html:132
-msgid "Choisissez les attestations à proposer à vos salariés"
-msgstr ""
+#: templates/download/credential_qr.html:18
+msgid "Scan the QRCode bellow with your smartphone wallet"
+msgstr "Scannez le QR code avec votre wallet smartphone"
 
 #: templates/issuer/add_campaign.html:37
 msgid "Add a new campaign"
@@ -1891,6 +1830,16 @@ msgstr ""
 " vous a communiqué un code de campagne pour accéder à la liste des "
 "attestations disponibles"
 
+#: templates/issuer/campaign_code.html:43
+#: templates/issuer/request_certificate.html:40
+#: templates/login/login_password.html:74
+#: templates/register/register_code.html:50
+#: templates/register/register_password.html:59
+#: templates/register/register_wallet_user.html:49
+#: templates/register/user_register.html:63
+msgid "Next"
+msgstr "Suivant"
+
 #: templates/issuer/company_dashboard.html:42
 msgid "Credential list"
 msgstr "Liste des attestations"
@@ -1914,10 +1863,6 @@ msgstr "Tous les validateurs"
 #: templates/issuer/company_dashboard.html:67
 msgid "All issuers"
 msgstr "Tous les signataires"
-
-#: templates/issuer/company_dashboard.html:73
-msgid "Refresh"
-msgstr "Rafraichir"
 
 #: templates/issuer/company_dashboard.html:82
 msgid "Subject"
@@ -2139,7 +2084,7 @@ msgstr "Se connecter"
 msgid "Sign In with password"
 msgstr "Se connecter avec un mot de passe"
 
-#: templates/login/did_auth.html:41 templates/login/login_password.html:90
+#: templates/login/did_auth.html:41 templates/login/login_password.html:77
 msgid "Forgot Username"
 msgstr "Nom utilisateur oublié"
 
@@ -2173,32 +2118,39 @@ msgstr "Entrez votre email pour obtenir votre nom d'utilisateur"
 msgid "Request"
 msgstr "Demande"
 
-#: templates/login/login_password.html:27
-msgid "Connect to your cloud portfolio"
+#: templates/login/login_password.html:23
+#: templates/login/tezotopia_login.html:23
+msgid "Connect to your credential repository"
 msgstr "Accéder à votre portfolio"
 
-#: templates/login/login_password.html:29
-#: templates/register/register_wallet_qrcode.html:33
+#: templates/login/login_password.html:24
+#: templates/login/tezotopia_login.html:24
+msgid "Present a credential signed by Talao"
+msgstr "Scannez et présentez n'importe quelle attestation signée par Ecole 42."
+
+#: templates/login/login_password.html:26
+#: templates/login/tezotopia_login.html:26
+#: templates/register/register_wallet_qrcode.html:40
 msgid "Open the Talao wallet"
 msgstr "Ouvrir le wallet Talao"
 
-#: templates/login/login_password.html:79
+#: templates/login/login_password.html:66
 msgid "Username"
 msgstr "Nom utilisateur"
 
-#: templates/login/login_password.html:89
+#: templates/login/login_password.html:76
 msgid "Forgot Password"
 msgstr "Mot de passe oublié"
 
-#: templates/login/login_password.html:92
+#: templates/login/login_password.html:79
 msgid "or"
 msgstr "ou"
 
-#: templates/login/login_password.html:97
-msgid "Scan and present any credential issued by Talao"
-msgstr "Scannez et présentez n'importe quelle attestation signée par Talao."
+#: templates/login/login_password.html:84
+msgid "Scan and present any credential issued by Ecole 42"
+msgstr "Scannez et présentez une attestation signée par Ecole 42."
 
-#: templates/login/login_password.html:131 templates/login/login_qr.html:79
+#: templates/login/login_password.html:122 templates/login/login_qr.html:79
 msgid "Your portfolio is loading ..."
 msgstr "Votre portfolio est actuellement en cours de chargement..."
 
@@ -2211,22 +2163,6 @@ msgstr ""
 "<br> Scannez le QR code avec votre wallet smartphone. <br>Vous pouvez "
 "présenter n'importe quelle attestation signée par Talao."
 
-#: templates/loyaltycard/loyaltycard.html:57
-msgid "Get your Loyalty Card"
-msgstr "Obtenir votre Carte de Fidélité"
-
-#: templates/phonepass/phonepass.html:38
-msgid ""
-"Verify your phone number to get one-click access to your services with "
-"your Talao smartphone wallet."
-msgstr ""
-"Validez votre numéro de téléphone pour avoir un accès en un clic à vos "
-"services."
-
-#: templates/phonepass/phonepass.html:41
-msgid "Enter your int. phone number"
-msgstr "Saisissez votre numéro de téléphone int."
-
 #: templates/register/end_of_registration.html:21
 msgid "Your portfolio have been installed."
 msgstr "Votre portfolio a été installé."
@@ -2236,8 +2172,8 @@ msgid "You can now Sign In."
 msgstr "Vous pouvez maintenant vous connecter."
 
 #: templates/register/end_of_registration.html:27
-msgid "Your professional Digital Identity"
-msgstr "Votre Identité Numérique"
+msgid "Your portfolio has been installed"
+msgstr "Votre compte a été installé."
 
 #: templates/register/end_of_registration.html:33
 msgid "Your username is :"
@@ -2281,29 +2217,24 @@ msgstr ""
 "Un mot de passe doit contenir un nombre, une lettre minuscule, une lettre"
 " majuscule et au minimum 8 caractères."
 
-#: templates/register/register_wallet_qrcode.html:18
+#: templates/register/register_wallet_qrcode.html:15
 msgid ""
-"<strong>Register</strong><br><br>Scan the QRCode bellow with your "
-"smartpĥone wallet."
+"<strong>Register a credential repository</strong><br><br>Scan the QRCode "
+"bellow with your smartpĥone wallet."
 msgstr ""
-"<strong>Créer un portfolio</strong><br><br>Scannez le QR code avec votre "
+"<strong>Créer un compte</strong><br><br>Scannez le QR code avec votre "
 "wallet."
 
-#: templates/register/register_wallet_qrcode.html:19
-#: templates/register/register_wallet_qrcode.html:31
+#: templates/register/register_wallet_qrcode.html:16
+#: templates/register/register_wallet_qrcode.html:38
 msgid "Present an Email Pass and fill the form with your firstname and lastname"
 msgstr "Présentez une preuve d'email et complétez avec votre nom et prénom."
 
-#: templates/register/register_wallet_qrcode.html:20
-#: templates/register/register_wallet_qrcode.html:32
-msgid "or present a Resident Card"
-msgstr "ou présentez une Carte de Résidence"
+#: templates/register/register_wallet_qrcode.html:37
+msgid "Register a credential repository"
+msgstr "Créer un compte"
 
-#: templates/register/register_wallet_qrcode.html:29
-msgid "Register a portfolio"
-msgstr "Créer un portfolio"
-
-#: templates/register/register_wallet_qrcode.html:42
+#: templates/register/register_wallet_qrcode.html:52
 msgid "Register without wallet"
 msgstr "Créer un portfolio sans wallet"
 
@@ -2349,8 +2280,8 @@ msgid ""
 msgstr "* Vous pouvez demander de nouvelles attestations à votre entreprise."
 
 #: templates/register/user_register.html:48
-msgid "Create a new Portfolio for your Digital Identity"
-msgstr "Créer un nouveau portfolio pour votre Identité Numérique Professionnelle"
+msgid "Create a new repository for your credentials"
+msgstr "Créer un compte pour vos certificats"
 
 #: templates/register/user_register.html:55
 msgid ""
@@ -2424,85 +2355,118 @@ msgstr "Lieu de naissance"
 msgid "Generate a QR code for a Resident Card"
 msgstr "Générez un QR code pour la carte de résident"
 
-#: templates/wallet/test/playground.html:20
-msgid "Create a resident card"
-msgstr "Créer une carte de résidence"
-
-#: templates/wallet/test/playground.html:26
+#: templates/wallet/test/playground.html:21
 msgid "Get a resident card"
 msgstr "Obtenir une carte de résidence"
 
-#: templates/wallet/test/playground.html:32
+#: templates/wallet/test/playground.html:27
 msgid "Verifier simulator"
 msgstr "Simulateur de Verifier"
 
-#: templates/wallet/test/playground.html:38
+#: templates/wallet/test/playground.html:33
 msgid "Get an identity pass"
 msgstr "Obtenir un pass d'identité"
 
-#: templates/wallet/test/playground.html:47
+#: templates/wallet/test/playground.html:42
 msgid "Get an email proof"
 msgstr "Obtenir une preuve d'email"
 
-#: templates/wallet/test/playground.html:53
-msgid "Get an expired Verifiable Credential"
-msgstr "Visualiser un Verifiable Credential expiré"
-
-#: templates/wallet/test/playground.html:60
-msgid "Log to Talao.co"
-msgstr "Se connecter a Talao.co"
-
-#: templates/wallet/test/playground.html:69
-msgid "Get a certificate of employment"
-msgstr "Obtenir une attestation employeur"
-
-#: templates/wallet/test/playground.html:77
-msgid "Display a Verifiable Presentation"
-msgstr "Afficher une Verifiable Presentation"
-
-#: templates/wallet/test/playground.html:83
+#: templates/wallet/test/playground.html:48
 msgid "Issuer simulator"
 msgstr "Simulateur d'Issuer"
 
-#: templates/wallet/test/playground.html:89
+#: templates/wallet/test/playground.html:54
+msgid "Get an expired Verifiable Credential"
+msgstr "Visualiser un Verifiable Credential expiré"
+
+#: templates/wallet/test/playground.html:65
+msgid "Get a certificate of employment"
+msgstr "Obtenir une attestation employeur"
+
+#: templates/wallet/test/playground.html:73
+msgid "Display the verifiable Credential and Verifiable Presentation"
+msgstr "Afficher une Verifiable Presentation"
+
+#: templates/wallet/test/playground.html:80
 msgid "Get a phone proof"
 msgstr "Obtenir une preuve de téléphone"
 
-#: templates/wallet/test/playground.html:97
-msgid "Register to Talao"
-msgstr "Créer un portfolio"
-
-#: templates/wallet/test/playground.html:103
+#: templates/wallet/test/playground.html:89
 msgid "Get a professional experience certificate"
 msgstr "Obtenir une attestation d'expérience professionnelle"
 
-#: templates/wallet/test/playground.html:110
-msgid "Share link by QRcode"
-msgstr "Partager un QR code"
+#: templates/wallet/test/playground.html:96
+msgid "Get an access badge with QRcode"
+msgstr "Obtenez un badge d'accès avec un QR code"
 
-#: templates/wallet/test/playground.html:119
-msgid "Get a revokable Verifiable Credential"
-msgstr "Collecter un Verifiable Credential révocable"
-
-#: templates/wallet/test/playground.html:127
-msgid "Revoke my Verifiable Credential"
-msgstr "Révoquer un Verifiable Credential"
+#: templates/wallet/test/playground.html:106
+msgid "Login with Verifiable Credentials"
+msgstr "Visualiser un Verifiable Credential expiré"
 
 #: templates/wallet/test/playground_nav_bar.html:10
 msgid "Wallet Playground"
 msgstr "Wallet playground"
 
-#: templates/wallet/test/playground_nav_bar.html:37
+#: templates/wallet/test/playground_nav_bar.html:40
+#: templates/wallet/test/playground_new__nav_bar.html:38
+#: templates/wallet/test/prosoon_nav_bar.html:38
 msgid "What is Self Sovereign Identity ?"
 msgstr "Qu'est ce que le Self Sovereign Identity ?"
 
-#: templates/wallet/test/playground_nav_bar.html:40
+#: templates/wallet/test/playground_new.html:24
+#: templates/wallet/test/prosoon.html:24
+msgid "Attestation employeur"
+msgstr "Attestation employeur"
+
+#: templates/wallet/test/playground_new.html:32
+msgid "Carte de réduction"
+msgstr "Carte de réduction"
+
+#: templates/wallet/test/playground_new.html:41
+msgid "Carte d'étudiant"
+msgstr "Carte étudiant"
+
+#: templates/wallet/test/playground_new.html:48
+msgid "Diplomes"
+msgstr "Diplomes"
+
+#: templates/wallet/test/playground_new__nav_bar.html:10
+msgid "Wallet for new playground"
+msgstr "Wallet playground"
+
+#: templates/wallet/test/playground_new__nav_bar.html:41
+#: templates/wallet/test/prosoon_nav_bar.html:41
 msgid "Download the app from Google store"
 msgstr "Télécharger l'app depuis le Google store"
 
-#: templates/wallet/test/playground_nav_bar.html:41
+#: templates/wallet/test/playground_new__nav_bar.html:42
+#: templates/wallet/test/prosoon_nav_bar.html:42
 msgid "Download the app from Apple store"
 msgstr "Télécharger l'app depuis l'Apple store"
+
+#: templates/wallet/test/prosoon.html:31
+msgid "Certificat de compétences"
+msgstr "Attestation employeur"
+
+#: templates/wallet/test/prosoon.html:39
+msgid "Certificat d'experience professionnelle"
+msgstr ""
+
+#: templates/wallet/test/prosoon.html:48
+msgid "Carte d'étudiant des métiers - CFA"
+msgstr ""
+
+#: templates/wallet/test/prosoon.html:55
+msgid "Diplomes , Learning Achievement style ESSIF"
+msgstr ""
+
+#: templates/wallet/test/prosoon_nav_bar.html:10
+msgid "Wallet for Prosoon"
+msgstr ""
+
+#: templates/wallet/test/revoked_qrcode.html:15
+msgid "Scan the QRCode bellow with your Credible wallet"
+msgstr "Scannez le QR code avec votre wallet smartphone"
 
 #: templates/wallet/test/simulator_nav_bar.html:40
 msgid "Issuer Simulator"
@@ -2511,5 +2475,4 @@ msgstr "Simulateur d'Issuer"
 #: templates/wallet/test/simulator_nav_bar.html:41
 msgid "Verifier Simulator"
 msgstr "Simulateur de Verifier"
-
 
