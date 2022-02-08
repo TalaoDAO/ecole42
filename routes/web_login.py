@@ -356,10 +356,11 @@ def wallet_endpoint(stream_id, red, mode):
             "domain" : mode.server
         }
 		# for testing purpose
-        did_auth_request = QueryBYExample
-        did_auth_request["challenge"] = session_data['challenge']
-        did_auth_request["domain"] = mode.server
+        #did_auth_request = QueryBYExample
+        #did_auth_request["challenge"] = session_data['challenge']
+        #did_auth_request["domain"] = mode.server
         return jsonify(did_auth_request)
+
     elif request.method == 'POST' :
         red.delete(stream_id)
         presentation = json.loads(request.form['presentation'])       

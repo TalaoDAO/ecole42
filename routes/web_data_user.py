@@ -462,7 +462,7 @@ def user(mode) :
 		else :
 			for counter, certificate in enumerate(session['all_certificate'],1) :
 				try : 
-					r = requests.get( mode.server + '/trusted-issuers-registry/v1/issuers/' + certificate['issuer'])
+					r = requests.get( 'https://talao.co/trusted-issuers-registry/v1/issuers/' + certificate['issuer'])
 					if r.status_code == 200 :
 						issuer_legalName = r.json()['issuer']['organizationInfo']['legalName']
 						issuer_currentAddress = r.json()['issuer']['organizationInfo']['currentAddress']

@@ -5,6 +5,7 @@
 gunicornconf.py
 bootstrap/*
 RSA_key/*
+to_be_signed_credentials/*
 __pycache__/*
 protocol/__pycache__/*
 keys.json

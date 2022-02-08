@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-
+<!-- Studentcard.html -->
 <head>
     {% include 'head.html' %}
 </head>
@@ -16,7 +16,7 @@
 
                             <div class="card shadow mb-3">
                                 <div class="card-header py-3">
-                                    <p class="text-primary m-0 font-weight-bold">&nbsp;Issue student cards</p>    
+                                    <p class="text-primary m-0 font-weight-bold">&nbsp;Student cards</p>    
                                 </div>
 
                             <div class="card-body">
@@ -29,8 +29,7 @@
                             <div class="form-group">
                                 <label ><strong>Student name</strong><br></label>
                                 <select name="username" class="form-control"><br>
-                                <option selected value="pierreaniel">Pierre Aniel</option>
-                                <option value="thierrythevenet">Thierry Thevenet</option>
+                                    {{options|safe}}
                                 </select>
                             </div>
                         </div>
@@ -47,10 +46,13 @@
                                 
                         
                                 <div class="form-row">
-                                    <div class="col-6">
-                                        <div class="form-group"><button class="btn btn-primary btn-sm" type="submit">Next</button></div>
+                                    <div class="col">
+                                        <div class="form-group"><button class="btn btn-primary btn-sm" type="submit">Issue</button></div>
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col">
+                                        <div class="form-group"><button disabled class="btn btn-primary btn-sm" type="submit">Revoke</button></div>
+                                    </div>
+                                    <div class="col">
 										<a href="/user/">
                                         <div class="form-group"><button class="btn btn-primary btn-sm" type="button">Cancel</button></div>
                                         </a>

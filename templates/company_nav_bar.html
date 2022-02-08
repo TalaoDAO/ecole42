@@ -50,6 +50,7 @@
     </li>
 
     </ul>
+
     <ul class="navbar-nav w-100 d-none d-md-block" style="flex-direction: row;">
 
     <!-- search only for large device 
@@ -74,11 +75,12 @@
       <ul class="navbar-nav mr-2" style="flex-direction: row;">
       <div class="d-inline-flex justify-content-center">
         <li class="nav-item d-none d-none d-md-block" role="presentation"><a style="color: rgb(14, 14, 14);" id="id_wc" class="nav-link active"></a></li> 
-
+        <li class="nav-item mx-1"><a class="nav-link active" href="/user/issue_certificate/" style="color: rgba(0, 0, 0);"><h5>{{_('Certificate')}}</h5></a></li>
+        <li class="nav-item mx-1"><a class="nav-link active" href="/user/issue_studentcard/" style="color: rgba(0, 0, 0);"><h5>{{_('Student card')}}</h5></a></li>
         <li class="nav-item dropdown no-arrow h-100" role="presentation">
           <div class="nav-item dropdown show">
             <a class=" nav-link" data-toggle="dropdown" aria-expanded="true" href="#">
-              <span  style="color: white;"><i class="fas fa-globe fa-sm fa-fw mr-2 text-gray-400"></i></span>
+              <span  style="color: rgb(15, 15, 15);"><i class="fas fa-globe fa-sm fa-fw mr-2 text-gray-400"></i></span>
             </a>
             <div class="dropdown-menu shadow dropdown-menu-right animated--grow-in" style="position:absolute;" role="menu">
               <a class="dropdown-item" role="presentation" href="/language?lang=en"><i class="fa fa-question-circle-o fa-sm fa-fw mr-2 text-gray-400"></i>English</a>
@@ -89,7 +91,9 @@
         {% if session['username'] == 'talao' %}
           <li class="nav-item d-none d-none d-md-block" role="presentation"><a title="Add Key" style="color: white;" class="nav-link active" href="/user/add_key/">{{_('Key')}}</a></li>
         {% endif %}
-        <li class="nav-item mx-1"><a class="nav-link active" href="/user/issue_certificate/" style="color: rgba(0, 0, 0);"><h5>{{_('Issue certificate')}}</h5></a></li>
+       
+     <li> </li>
+
 
 <!--
         <li class="nav-item mx-1"><a class="nav-link active" href="/user/" style="color: rgba(19, 18, 18, 0.9);"><h4><strong>{{_('Identity')}}</strong></h4></a></li>

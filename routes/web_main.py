@@ -473,13 +473,7 @@ def issue_certificate(mode):
                                 )
     if request.method == 'POST' :
 
-        if request.form['certificate_type'] == 'studentcard'  :
-            my_list = directory.user_list_complete(mode)
-            return render_template('issue_studentcard.html',
-                                    **session['menu']
-                                    )
-
-        elif request.form['certificate_type'] == 'completion'  :
+        if request.form['certificate_type'] == 'completion'  :
             return render_template('issue_completion.html',
                                     **session['menu'],
                                   )
@@ -488,8 +482,22 @@ def issue_certificate(mode):
             return redirect(mode.server + 'user/')
 
 def issue_studentcard(mode):
-  
     check_login()
+
+    if request.method == 'GET' :
+        my_list = [username for username in ns.identity_list(mode) if username not in ['talao', 'ecole42']]
+        options_html = " "
+        for username in my_list :
+            workspace_contract = ns.get_data_from_username(username, mode)["workspace_contract"]
+            personal = json.loads(ns.get_personal(workspace_contract, mode))
+            firstname = personal['firstname']['claim_value'].capitalize()
+            lastname = personal['lastname']['claim_value'].capitalize()
+            options_html += """<option selected value=""" + username + """>""" + firstname + """ """ + lastname + """</option>"""
+            print(options_html)
+        return render_template('studentcard.html',
+                                    **session['menu'],
+                                    options=options_html
+                                    )
 
     # call from issue_reference_credential.html
     if request.method == 'POST' :

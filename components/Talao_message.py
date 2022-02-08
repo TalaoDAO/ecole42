@@ -12,7 +12,7 @@ from flask_babel import  _
 
 import constante
 
-signature = '\r\n\r\n\r\n\r\nThe Talao team.\r\nhttps://talao.io/'
+signature = '\r\n\r\n\r\n\r\nThe Ecole 42 team.\r\nhttps://42.fr/'
 
 """ Envoi du code secret """
 def messageAuth (email_to, random, mode) :
@@ -26,9 +26,9 @@ def messageAuth (email_to, random, mode) :
 
 	# instance of MIMEMultipart
 	msg = MIMEMultipart()
-	msg['From'] = formataddr((str(Header('Talao', 'utf-8')), fromaddr))
+	msg['From'] = formataddr((str(Header('Ecole 42', 'utf-8')), fromaddr))
 	msg['To'] = ", ".join(toaddr)
-	msg['Subject'] = 'Talao : Email authentification  '
+	msg['Subject'] = 'Ecole 42 : Email authentification  '
 
 	# string to store the body of the mail
 	body = 'Your verification code is : '+ random
@@ -65,13 +65,13 @@ def messageLog(name, firstname, username, email,status,eth_a, eth_p, workspace_c
 	# instance of MIMEMultipart
 	msg = MIMEMultipart()
 	# storing the senders email address
-	msg['From'] = formataddr((str(Header('Talao', 'utf-8')), fromaddr))
+	msg['From'] = formataddr((str(Header('Ecole 42', 'utf-8')), fromaddr))
 	# storing the receivers email address
 	msg['To'] = ", ".join(toaddr)
 	# storing the subject
-	msg['Subject'] = 'Workspace Log : New Identity '
+	msg['Subject'] = 'New account '
 	# string to store the body of the mail
-	body = "".join([_('A new Talao workspace has been deployed\r\nUsername : '),
+	body = "".join([_('A new account has been deployed\r\nUsername : '),
 					username,
 					'\r\n\r\nEmail : ',
 					email,
@@ -195,9 +195,9 @@ def messageUser(name, firstname, username, email,eth_a, eth_p, workspace_contrac
 	toaddr = [email]
 
 	msg = MIMEMultipart()
-	msg['From'] = formataddr((str(Header('Talao', 'utf-8')), fromaddr))
+	msg['From'] = formataddr((str(Header('Ecole 42', 'utf-8')), fromaddr))
 	msg['To'] = ", ".join(toaddr)
-	msg['Subject'] = 'Your professional Identity by Talao'
+	msg['Subject'] = 'Your certificates by Ecole 42'
 	# string to store the body of the mail
 
 	html = str(codecs.open("templates/emails/register.html", 'r', 'utf-8').read()).format(username = username)
