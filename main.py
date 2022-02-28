@@ -45,7 +45,7 @@ from routes import web_main, web_login, repository, web_wallet_download,  web_ap
 
 #BUNNEY Calum <calum.bunney@nexusgroup.com>
 # Server Release
-VERSION = '0.4.2'
+VERSION = '0.4.3'
 logging.info('Ecole42 version : %s', VERSION)
 
 # Framework Flask and Session setup
@@ -205,6 +205,54 @@ def assetlinks():
 def apple_app_site_association(): 
     document = json.load(open('apple-app-site-association', 'r'))
     return jsonify(document)
+
+
+
+# .well-known DID API DID document
+@app.route('/.well-known/did.json', methods=['GET'], defaults={'mode' : mode})
+def well_known_did (mode) :
+    """ did:web
+    https://w3c-ccg.github.io/did-method-web/
+    https://identity.foundation/.well-known/resources/did-configuration/#LinkedDomains
+    """
+    DidDocument = did_doc()
+    return jsonify(DidDocument)
+
+def did_doc() :
+    return  {
+                "@context": [
+                    "https://www.w3.org/ns/did/v1",
+                    {
+                        "@id": "https://w3id.org/security#publicKeyJwk",
+                        "@type": "@json"
+                    }
+                ],
+                "id": "did:web:ecole42.talao.co",
+                "verificationMethod": [
+                    
+                    {
+                        "id": "did:web:ecole42.talao.co#key-1",
+                        "type": "JwsVerificationKey2020",
+                        "controller": "did:web:ecole42.talao.co",
+                        "publicKeyJwk": {
+                            "e":"AQAB",
+                            "kid":"did:web:ecole42.talao.co#key-1",
+                            "kty":"RSA",
+                            "n":"mIPHiLUlfIwj9udZARJg5FlyXuqMsyGHucbA-CqpJh98_17Qvd51SAdg83UzuCihB7LNYXEujnzEP5J5mAWsrTi0G3CRFk-pU_TmuY8p57M_NXvB1EJsOrjuki5HmcybzfkJMtHydD7gVotPoe-W4f8TxWqB54ve4YiFczG6A43yB3lLCYZN2wEWfwKD_FcaC3wKWdHFxqLkrulD4pVZQ_DwMNuf2XdCvEzpC33ZsU3DB6IxtcSbVejGCyq5EXroIh1-rp6ZPuCGExg8CjiLehsWvOmBac9wO74yfo1IF6PIrQQNkFA3vL2YWjp3k8SO0PAaUMF44orcUI_OOHXYLw"
+                        }
+                    },
+                ],
+                "authentication" : [
+                    "did:web:talao.co#key-1",
+                ],
+                "assertionMethod" : [
+                    "did:web:talao.co#key-1",
+                ],
+                "capabilityInvocation":[
+                    "did:web:talao.co#key-1"
+                ]
+            }
+
 
 
 # MAIN entry point for test
