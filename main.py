@@ -243,13 +243,13 @@ def did_doc() :
                     },
                 ],
                 "authentication" : [
-                    "did:web:talao.co#key-1",
+                    "did:web:ecole42.talao.co#key-1",
                 ],
                 "assertionMethod" : [
-                    "did:web:talao.co#key-1",
+                    "did:web:ecole42.talao.co#key-1",
                 ],
                 "capabilityInvocation":[
-                    "did:web:talao.co#key-1"
+                    "did:web:ecole42.talao.co#key-1"
                 ]
             }
 
